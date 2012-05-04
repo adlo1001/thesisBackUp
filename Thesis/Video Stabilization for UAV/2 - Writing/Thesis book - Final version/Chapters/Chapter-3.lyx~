@@ -1,0 +1,212 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\options intoc,titlepage,fleqn
+\use_default_options false
+\master ../Thesis.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding latin9
+\fontencoding T1
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 2
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Problem Description
+\end_layout
+
+\begin_layout Section
+Overview
+\end_layout
+
+\begin_layout Standard
+In questa sezione si deve descrivere l'obiettivo della ricerca, le problematiche
+ affrontate ed eventuali definizioni preliminari nel caso la tesi sia di
+ carattere teorico.
+\end_layout
+
+\begin_layout Standard
+• Describe Objetives
+\end_layout
+
+\begin_layout Standard
+• Describe Problem
+\end_layout
+
+\begin_layout Section
+Sigue el Vacile
+\end_layout
+
+\begin_layout Standard
+In mathematics a projective space is a set of elements similar to the set
+ P(V) of lines through the origin of a vector space V.
+ The cases when V=R2 or V=R3 are the projective line and the projective
+ plane, respectively.
+ The idea of a projective space relates to perspective, more precisely to
+ the way an eye or a camera projects a 3D scene to a 2D image.
+ All points which lie on a projection line (i.e., a "line-of-sight"), intersecting
+ with the entrance pupil of the camera, are projected onto a common image
+ point.
+ In this case the vector space is R3 with the camera entrance pupil at the
+ origin and the projective space corresponds to the image points.
+ Projective spaces can be studied as a separate field in mathematics, but
+ are also used in various applied fields, geometry in particular.
+ Geometric objects, such as points, lines, or planes, can be given a representat
+ion as elements in projective spaces based on homogeneous coordinates.
+ As a result, various relations between these objects can be described in
+ a simpler way than is possible without homogeneous coordinates.
+ Furthermore, various statements in geometry can be made more consistent
+ and without exceptions.
+ For example, in the standard geometry for the plane two lines always intersect
+ at a point except when the lines are parallel.
+ In a projective representation of lines and points, however, such an intersecti
+on point exists even for parallel lines, and it can be computed in the same
+ way as other intersection points.
+ Other mathematical fields where projective spaces play a significant role
+ are topology, the theory of Lie groups and algebraic groups, and their
+ representation theories.
+\end_layout
+
+\begin_layout Subsection*
+Esta es una subsection
+\end_layout
+
+\begin_layout Standard
+In mathematics a projective space is a set of elements similar to the set
+ P(V) of lines through the origin of a vector space V.
+ The cases when V=R2 or V=R3 are the projective line and the projective
+ plane, respectively.
+ The idea of a projective space relates to perspective, more precisely to
+ the way an eye or a camera projects a 3D scene to a 2D image.
+ All points which lie on a projection line (i.e., a "line-of-sight"), intersecting
+ with the entrance pupil of the camera, are projected onto a common image
+ point.
+ In this case the vector space is R3 with the camera entra
+\end_layout
+
+\begin_layout Subsubsection*
+Esto ya es el colmo de la subsub
+\end_layout
+
+\begin_layout Standard
+In mathematics a projective space is a set of elements similar to the set
+ P(V) of lines through the origin of a vector space V.
+ The cases when V=R2 or V=R3 are the projective line and the projective
+ plane, respectively.
+ The idea of a projective space relates to perspective, more precisely to
+ the way an eye or a camera projects a 3D scene to a 2D image.
+ All points which lie on a projection line (i.e., a "line-of-sight"), intersecting
+ with the entrance pupil of the camera, are projected onto a common image
+ point.
+ In this case the vector space is R3 with the camera entrance pupil at the
+ origin and the projective space corresponds to the image points.
+ Projective spaces can be studied as a separate field in mathematics, but
+ are also used in various applied fields, geometry in particular.
+ Geometric objects, such as points, lines, or planes, can be given a representat
+ion as elements in projective spaces based on homogeneous coordinates.
+ As a result, various relations between these objects can be described in
+ a simpler way than is possible without homogeneous coordinates.
+ Furthermore, various statements in geometry can be made more consistent
+ and without exceptions.
+ For example, in the standard geometry for the plane two lines always intersect
+ at a point except when the lines are parallel.
+ In a projective representation of lines and points, however, such an intersecti
+on point exists even for parallel lines, and it can be computed in the same
+ way as other intersection points.
+ Other mathematical fields where projective spaces play a significant role
+ are topology, the theory of Lie groups and algebraic groups, and their
+ representation theories.
+\end_layout
+
+\begin_layout Standard
+In mathematics a projective space is a set of elements similar to the set
+ P(V) of lines through the origin of a vector space V.
+ The cases when V=R2 or V=R3 are the projective line and the projective
+ plane, respectively.
+ The idea of a projective space relates to perspective, more precisely to
+ the way an eye or a camera projects a 3D scene to a 2D image.
+ All points which lie on a projection line (i.e., a "line-of-sight"), intersecting
+ with the entrance pupil of the camera, are projected onto a common image
+ point.
+ In this case the vector space is R3 with the camera entrance pupil at the
+ origin and the projective space corresponds to the image points.
+ Projective spaces can be studied as a separate field in mathematics, but
+ are also used in various applied fields, geometry in particular.
+ Geometric objects, such as points, lines, or planes, can be given a representat
+ion as elements in projective spaces based on homogeneous coordinates.
+ As a result, various relations between these objects can be described in
+ a simpler way than is possible without homogeneous coordinates.
+ Furthermore, various statements in geometry can be made more consistent
+ and without exceptions.
+ For example, in the standard geometry for the plane two lines always intersect
+ at a point except when the lines are parallel.
+ In a projective representation of lines and points, however, such an intersecti
+on point exists even for parallel lines, and it can be computed in the same
+ way as other intersection points.
+ Other mathematical fields where projective spaces play a significant role
+ are topology, the theory of Lie groups and algebraic groups, and their
+ representation theories.
+\end_layout
+
+\end_body
+\end_document

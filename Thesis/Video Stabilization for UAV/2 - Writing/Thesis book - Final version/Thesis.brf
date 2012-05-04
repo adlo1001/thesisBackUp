@@ -1,0 +1,7 @@
+\backcite {Juancho}{{3}{2.1}{section.2.1}}
+\backcite {test1}{{3}{2.1}{section.2.1}}
+\backcite {loser}{{11}{5.1}{section.5.1}}
+\backcite {test1}{{11}{5.1}{section.5.1}}
+\backcite {Juancho,loser,song}{{13}{6.1}{section.6.1}}
+\backcite {test1}{{13}{6.1}{section.6.1}}
+\backcite {loser}{{15}{A.1}{section.A.1}}

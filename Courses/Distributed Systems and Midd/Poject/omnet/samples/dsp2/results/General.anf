@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/dsp2/results/General-*.vec"/>
+    <inputs name="/dsp2/results/General-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="dataset_test1">
+      <items xsi:type="scave:Add" filterPattern="" type="HISTOGRAM"/>
+      <items xsi:type="scave:BarChart" name="Type of user request">
+        <properties name="X.Axis.Title" value="1:Publish 2:Subscribe 3:Unsubscribe"/>
+        <properties name="Y.Axis.Title" value="Number"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.1"/>
+  </chartSheets>
+</scave:Analysis>

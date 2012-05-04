@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Sep 14 16:43:14 CEST 2006
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=ProgettinoSoftComputing_fat.jar
+manifest.mergeall=true
+manifest.mainclass=esempioBanane.MainGrafica
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

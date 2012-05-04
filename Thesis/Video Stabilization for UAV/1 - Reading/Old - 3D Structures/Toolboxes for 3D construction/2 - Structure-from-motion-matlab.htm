@@ -1,0 +1,486 @@
+
+ 
+
+
+
+ 
+
+
+
+ 
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/vincents-structure-from-motion-matlab-toolbox/wiki/gettingStarted" />
+ 
+ <script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = "D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028";
+ 
+ 
+ var CS_env = {"profileUrl":["/u/101180935780764729458/"],"token":"D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028","assetHostPath":"http://www.gstatic.com/codesite/ph","domainName":null,"assetVersionPath":"http://www.gstatic.com/codesite/ph/16910002703874313365","projectHomeUrl":"/p/vincents-structure-from-motion-matlab-toolbox","relativeBaseUrl":"","projectName":"vincents-structure-from-motion-matlab-toolbox","loggedInUserEmail":"rodrygojose@gmail.com"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ _gaq.push(
+ ['projectTracker._setAccount', 'UA-4162056-2'],
+ ['projectTracker._trackPageview']);
+ 
+ 
+ </script>
+ 
+ 
+ <title>gettingStarted - 
+ vincents-structure-from-motion-matlab-toolbox -
+ 
+ How to install the toolbox and use the ubiquitous Animation object. - 
+ Structure from motion toolbox for Matlab - Google Project Hosting
+ </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16910002703874313365/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16910002703874313365/css/ph_detail.css" >
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="/feeds/p/vincents-structure-from-motion-matlab-toolbox/svnchanges/basic?path=/wiki/gettingStarted.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/16910002703874313365/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+</head>
+<body class="t6">
+<script type="text/javascript">
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <b>rodrygojose@gmail.com</b>
+ 
+ 
+ | <a href="/u/101180935780764729458/" id="projects-dropdown" onclick="return false;"
+ ><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="/u/101180935780764729458/" onclick="_CS_click('/gb/ph/profile');"
+ title="Profile, Updates, and Settings"
+ ><u>Profile</u></a>
+ | <a href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fvincents-structure-from-motion-matlab-toolbox%2Fwiki%2FgettingStarted" 
+ onclick="_CS_click('/gb/ph/signout');"
+ ><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/vincents-structure-from-motion-matlab-toolbox">
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/">
+ 
+ <img src="http://www.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/"><span itemprop="name">vincents-structure-from-motion-matlab-toolbox</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/vincents-structure-from-motion-matlab-toolbox/"><span itemprop="description">Structure from motion toolbox for Matlab</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/gettingStarted?tm=6" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/vincents-structure-from-motion-matlab-toolbox/source/checkout"
+ class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/vincents-structure-from-motion-matlab-toolbox/w/list" method="GET" style="display:inline">
+ <select id="can" name="can" >
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1" >&nbsp;All wiki pages</option>
+ <option value="3" >&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5" >&nbsp;My starred pages</option>
+ 
+ <option value="4" >&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input type="text" size="38" id="searchq" name="q" value=""
+ autocomplete="off" ></span>
+ 
+ 
+ 
+ <input type="submit" value="Search" >
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+ 
+ style="padding:0 3px 3px 0; margin:0"
+ 
+ 
+>
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+ 
+<style type="text/css">
+ #wikimaincol { padding-top: 6px; padding-left:1em}
+ #sidebarcontainer {
+ padding: 1.5em 2px 2px 2px;
+ min-width: 15em;
+ max-width: 20em;
+ overflow:hidden;
+}
+ .sidebartop ul { margin:0 0 0 .5em; padding-left:0 !important; list-style:none}
+ .sidebartop ul ul { margin-left:1em; padding-left:0; list-style:none; display:none}
+ .sidebartop li { margin:0 0 2px 0; padding:1px; padding-left:14px; cursor:pointer}
+ .sidebartop li a { padding:2px}
+ .sidebartop li { background: url(http://www.gstatic.com/codesite/ph/images/plus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeopen { background: url(http://www.gstatic.com/codesite/ph/images/minus.gif) no-repeat 1px 3px}
+ .sidebartop li.treeleaf { background:none}
+ .currentpagelink { 
+ font-weight: bold;
+ text-decoration: none;
+ color: black !important; 
+ background: #c3d9ff;
+ }
+ .sidebartop ul.treeleafcontainer { display:block;}
+ .sidebarcontent { 
+ vertical-align:top;
+ padding-right: 3px;
+ border-right: 2px solid #ccc;
+ }
+</style>
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tr>
+ 
+ 
+ <td class="sidebarcontent">
+ <div class="vt expand" id="wikisidebar">
+ <div>
+ 
+ <div style="float:right;">
+ <a class="ifExpand" style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar('', 'vincents-structure-from-motion-matlab-toolbox', this, 'D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028'); return false;"
+ title="Hide sidebar"><b>&lsaquo;&lsaquo;</b></a>
+ </div>
+ <div class="ifCollapse" style="padding:0 2px">
+ <a style="font-size:130%; color:blue; text-decoration:none"
+ href="#" onclick="_DW_toggleSidebar('', 'vincents-structure-from-motion-matlab-toolbox', this, 'D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028'); return false;"
+ title="Show sidebar"><b>&rsaquo;&rsaquo;</b></a>
+ </div>
+ 
+ 
+ <div id="sidebarcontainer" class="sidebartop ifExpand">
+ <ul><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/gettingStarted">Getting Started</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/2dGeometry">2D Geometry</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/sfm">SfM</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/nrsfm">NRSfM</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/algorithmList">Algorithms</a> </li></ul>
+ </div>
+ </div>
+</div>
+
+ </td>
+ 
+ <td style="vertical-align:top; padding-left:5px">
+ 
+ <div id="wikiheader">
+ 
+ <img width="15" height="15" id="star_img"
+ src="http://www.gstatic.com/codesite/ph/images/star_off.gif"
+ style="cursor:pointer"
+ onclick="_CS_toggleStar(this,
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 'vincents-structure-from-motion-matlab-toolbox:gettingStarted'
+ });"/>
+ 
+ <span style="font-size:120%;font-weight:bold">gettingStarted</span>
+ &nbsp;
+ <div> 
+ 
+ <i>How to install the toolbox and use the ubiquitous Animation object.</i>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Fri Jul  8 09:58:36 2011">
+ Jul 8, 2011</span>
+ 
+ by <a style="white-space: nowrap" href="/u/102471197471585468043/">vincent....@gmail.com</a>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h1><a name="Introduction"></a>Introduction<a href="#Introduction" class="section_anchor"></a></h1><h2><a name="Installation"></a>Installation<a href="#Installation" class="section_anchor"></a></h2><p>This toolbox has been tested with the following configurations: <ul><li>Ubuntu 9.04 32 bits Matlab 2008b </li><li>Ubuntu 9.04 64 bits Matlab 2009b, Octave 3.2 </li><li>Windows XP 32 bits, Matlab 2007b </li></ul>The toolbox compiles and runs mostly under Octave 3.2, as long as other depending toolboxes are not involved. </p><p>Simply unzip, then add all directories to the Matlab path: </p><pre class="prettyprint">addpath(genpath(&#x27;c:\toolboxSFM&#x27;)); savepath;</pre><p>Now, the mex files need to be created. </p><h3><a name="Compiling_on_Windows"></a>Compiling on Windows<a href="#Compiling_on_Windows" class="section_anchor"></a></h3><p>To create the mex files, just run: </p><pre class="prettyprint">toolboxSfmCompile()</pre><p>I still provide SBA binaries for Windows 32 as it can be a pain to compile everything there. If you want to compile your own SBA libraries, or if you are on Windows 64 bits, launch matlab from the Visual Studio command line and then run: </p><pre class="prettyprint">toolboxSfmCompile(true)</pre><p>You might need to modify some Makefile though. </p><h3><a name="Compiling_on_Linux"></a>Compiling on Linux<a href="#Compiling_on_Linux" class="section_anchor"></a></h3><p>From Matlab, just run </p><pre class="prettyprint">toolboxSfmCompile()</pre><p>If that crashes, you don&#x27;t have one of the following: make, gcc, g++, lapack or blas. For example, on Ubuntu, you need the following packages: build-essential, liblapack-dev, liblapack (or liblapack_pic on 64bits), liblapack3gf, libblas3gf, libblas-dev. </p><p>If you want to create your own SBA library, just run: </p><pre class="prettyprint">toolboxSfmCompile(true)</pre><p>but you will need a PIC Blas (on 64-bits) and you will need to change the SBA Makefile too. </p><p>If you get some warnings about your gcc, just impose the version to use this way: </p><pre class="prettyprint">toolboxSfmCompile(false, 4.2)</pre><h2><a name="Dependencies"></a>Dependencies<a href="#Dependencies" class="section_anchor"></a></h2><p>This toolbox depends on an excellent toolbox that I helped reorganize and improve a lot: Piotr&#x27;s Image &amp; Video Toolbox for Matlab ( <a href="http://vision.ucsd.edu/~pdollar/toolbox/doc/index.html" rel="nofollow">http://vision.ucsd.edu/~pdollar/toolbox/doc/index.html</a>). </p><p>For certain parts of the code, the following matlab toolboxes are also required: <ul><li>Yalmip : <a href="http://users.isy.liu.se/johanl/yalmip/" rel="nofollow">http://users.isy.liu.se/johanl/yalmip/</a> </li><li>GloptiPoly 3 : <a href="http://www.laas.fr/~henrion/software/gloptipoly3/" rel="nofollow">http://www.laas.fr/~henrion/software/gloptipoly3/</a> </li><li>an SDP solver : I recommend SDPA (<a href="http://sdpa.indsys.chuo-u.ac.jp/sdpa/" rel="nofollow">http://sdpa.indsys.chuo-u.ac.jp/sdpa/</a> but not on matlab 64-bit yet) or CSDP (<a href="https://projects.coin-or.org/Csdp/" rel="nofollow">https://projects.coin-or.org/Csdp/</a>). You can also use Sedumi (<a href="http://sedumi.mcmaster.ca/" rel="nofollow">http://sedumi.mcmaster.ca/</a>) or whatever Yalmip supports. </li></ul></p><p>For Octave, you need to install octave-optim </p><h2><a name="Misc"></a>Misc<a href="#Misc" class="section_anchor"></a></h2><p>I tried to keep a very good and detailed documentation with references to the algorithms I implemented (most of them have a reference to HZ2 standing for the second edition of the Hartley and Zisserman : Multiple View Geometry) but if you have a question, suggestion, or if you find a bug, please email me. </p><p>If you use this toolbox in a paper, I would be grateful if you could cite it using the following BibTex entry: </p><pre class="prettyprint">@misc{vincentsSFMToolbox,
+  Author = {Vincent Rabaud},
+  Title = {Vincent&#x27;s {S}tructure from {M}otion {T}oolbox},
+  howpublished = {\url{http://code.google.com/p/vincents-structure-from-motion-matlab-toolbox}}}</pre><h1><a name="The_Animation_object"></a>The Animation object<a href="#The_Animation_object" class="section_anchor"></a></h1><p>An Animation object is the main kind of object passed between the different methods of the toolbox. It contains the 2D/3D positions of the different points (W,S,mask), the camera info (isProj,P,K,R,t), some info about the data (type,conn) and some info about NRSFM if needed (l,SBasis). It has the following members: <ul><li>nPoint: the number of points. </li><li>nFrame: the number of frames in the sequence. </li><li>nBasis: the number of bases used in NRSFM (if applicable). </li><li>S: <tt>[ 3 x nPoint x nFrame ]</tt> matrix: the position of the 3D points (X,Y,Z). </li><li>W: <tt>[ 2 x nPoint x nFrame ]</tt> matrix: the projected 2D points (x,y). </li><li>mask: <tt>[ nPoint x nFrame ]</tt> boolean matrix: (i,j) contains true if the point i appears in the frame j. </li><li>isProj: boolean indicating if the camera is projective or not (in which case it is assumed to be affine). </li><li>P: <tt>[ 3 x 4 x nFrame ]</tt> matrix: the camera projection matrix for every frame </li><li>K: <tt>[ 3 x nFrame ]</tt> (affine) or <tt>[ 5 x nFrame ]</tt> (projective) matrix: contains the intrinsic camera parameters for every frame. The coefficients are stored as follows: </li><blockquote>Affine (<tt>[ 3 x nFrame ]</tt>) 
+<blockquote><table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> K1 </td><td style="border: 1px solid #ccc; padding: 5px;"> K2 </td><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td></tr> </table>
+<table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> K3 </td><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td></tr> </table>
+<table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> 1 </td></tr> </table>
+</blockquote>Projective (<tt>[ 5 x nFrame ]</tt>) 
+<blockquote><table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> K1 </td><td style="border: 1px solid #ccc; padding: 5px;"> K2 </td><td style="border: 1px solid #ccc; padding: 5px;"> K4 </td></tr> </table>
+<table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> K3 </td><td style="border: 1px solid #ccc; padding: 5px;"> K5 </td></tr> </table>
+<table class="wikitable"><tr><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> 0 </td><td style="border: 1px solid #ccc; padding: 5px;"> 1 </td></tr> </table>
+</blockquote></blockquote><li> KFull: the full version of the above <a href="">3 x 3 nFrame </a> or <a href="">3 x 3 </a> </li><li>R: <tt>[ 3 x 3 x nFrame ]</tt> matrix: the rotation matrix. </li><li>t: <tt>[ 3 x nFrame ]</tt> matrix: the translation matrix. </li><li>type: the type according to generateToyAnimation (-1 if none). </li><li>conn: cell of arrays indicating connectivities: each array is a list of the indices of the points forming a broken line. E.g. <tt>[1 2 3]</tt> means there will be a line from 1 to 2 and one from 2 to 3. This is only used for display purposes. </li><li>SBasis: <tt>[ nBasis x nPoint x nFrame ]</tt> matrix: the bases used in linear NRSFM </li><li>l: <tt>[ nBasis x nPoint x nFrame ]</tt> matrix: the coefficients used in linear NRSFM. If the matrix is <tt>[ (nBasis-1) x nPoint x nFrame ]</tt>, the first basis will always have a coefficient of 1 (assumption of Torresani et al). </li><li>misc: whatever you want :) </li></ul></p><h1><a name="The_Animation_member_functions"></a>The Animation member functions<a href="#The_Animation_member_functions" class="section_anchor"></a></h1><p>The Animation object comes with a few very useful member functions. Their input/output is detailed in the functions themselves: <ul><li>addNoise: add different kinds of noise to the Animation. </li><li>alignTo: aligns an Animation to another or to 2D data by applying a rigid transformation or homography. </li><li>centerW: centers the projection matrix W. </li><li>computeError: compute several errors (Bregler CVPR 2000, Torresani CVPR 2001, Torresani PAMI 2008). </li><li>generateCamFromRt: generate the positions of the optical center based on R and t in Animation. </li><li>generateKRt: generate K,R,t from the projection matrices. </li><li>generateP: generate the projection matrices from K,R,t. </li><li>generateSAbsolute: generate S transformed by R and t. </li><li>generateW: generate the projected point coordinates. </li><li>sampleFrame: sample an Animation object with respect to the number of frames. </li><li>setFirstRToId: set the first rotation/translation to id for an Animation. </li></ul></p><h1><a name="The_Animation_rules"></a>The Animation rules<a href="#The_Animation_rules" class="section_anchor"></a></h1><p>To simplify the use of an Animation object, certain members of an Animation are automatically updated when others are too. <ul><li>nPoint, nBasis, nFrame are automatically filled/updated when certain matrices are filled/updated. </li><li>when any element in l or SBasis is modified, S is geenrated automatically and cannot be modified. </li><li>if R and t are not empty and filled/updated, P is generated automatically and cannot be modified. </li><li>if K or KFull is modified, so is the other one </li></ul>This is very convenient but costly. I just believe that it is very little compared to some sfm/nrsfm computations. </p><h1><a name="Using_it_in_SFM/NRSFM"></a>Using it in SFM/NRSFM<a href="#Using_it_in_SFM/NRSFM" class="section_anchor"></a></h1><p>Now, we can see how to use the Animation objects in: <ul><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/2dGeometry">2dGeometry</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/sfm">sfm</a> </li><li><a href="/p/vincents-structure-from-motion-matlab-toolbox/wiki/nrsfm">nrsfm</a> </li></ul></p>
+ </div>
+ </div>
+ </td><tr>
+</table>
+ </div>
+
+
+ 
+ 
+ 
+ 
+ 
+ <div id="commentform">
+ <form action="../w/detail.do" method="post">
+ <table>
+ <tr><td class="vt">
+ <input type="hidden" name="pagename" value="gettingStarted" >
+ <input type="hidden" name="token" value="D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028" >
+ <div class="graytext" style="float: right;">
+ Hint: You can use <a href="http://code.google.com/p/support/wiki/WikiSyntax">Wiki Syntax.</a>
+ </div>
+ <div>Enter a comment:</div>
+ <textarea name="content" rows="6" cols="100"></textarea><br><br>
+ <input type="submit" name="submit" value="Submit" >
+ </td>
+ </table>
+ </form>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input type="hidden" name="sequence_num" value="" >
+ <input type="hidden" name="create_time" value="" >
+ <input type="hidden" name="mode" value="" >
+ <input type="hidden" name="pagename" value="gettingStarted" >
+ <input type="hidden" name="token" value="D5pWeK9T1G3g9WisXXbZMWPmFzA:1332680806028" >
+ </form>
+
+
+ <script src="http://www.gstatic.com/codesite/ph/16910002703874313365/js/dwiki_scripts_20081003.js"></script>
+
+
+ <script src="http://www.gstatic.com/codesite/ph/16910002703874313365/js/prettify/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="http://www.gstatic.com/codesite/ph/16910002703874313365/js/dit_scripts.js"></script>
+
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+</script>
+
+  
+ 
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/16910002703874313365/js/ph_core.js"></script>
+ 
+ 
+ 
+ 
+ <script type="text/javascript" src="/js/codesite_product_dictionary_ph.pack.04102009.js"></script>
+</div> 
+<div id="footer" dir="ltr">
+ <div class="text">
+ &copy;2011 Google -
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+

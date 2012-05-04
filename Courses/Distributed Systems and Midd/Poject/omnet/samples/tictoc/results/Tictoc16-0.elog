@@ -1,0 +1,50 @@
+MC id 1 c cCompoundModule t Tictoc16 n Tictoc16 cm 1
+GC m 2 g 1048576 n gate$i i 0 o 0
+GC m 2 g 1572864 n gate$o i 0 o 1
+MC id 2 c Txc16 t Txc16 pid 1 n tic[0]
+MS id 2 d i=block/routing
+GC m 3 g 1048576 n gate$i i 0 o 0
+GC m 3 g 1048577 n gate$i i 1 o 0
+GC m 3 g 1048578 n gate$i i 2 o 0
+GC m 3 g 1572864 n gate$o i 0 o 1
+GC m 3 g 1572865 n gate$o i 1 o 1
+GC m 3 g 1572866 n gate$o i 2 o 1
+MC id 3 c Txc16 t Txc16 pid 1 n tic[1]
+MS id 3 d i=block/routing
+GC m 4 g 1048576 n gate$i i 0 o 0
+GC m 4 g 1572864 n gate$o i 0 o 1
+MC id 4 c Txc16 t Txc16 pid 1 n tic[2]
+MS id 4 d i=block/routing
+GC m 5 g 1048576 n gate$i i 0 o 0
+GC m 5 g 1572864 n gate$o i 0 o 1
+MC id 5 c Txc16 t Txc16 pid 1 n tic[3]
+MS id 5 d i=block/routing
+GC m 6 g 1048576 n gate$i i 0 o 0
+GC m 6 g 1048577 n gate$i i 1 o 0
+GC m 6 g 1048578 n gate$i i 2 o 0
+GC m 6 g 1572864 n gate$o i 0 o 1
+GC m 6 g 1572865 n gate$o i 1 o 1
+GC m 6 g 1572866 n gate$o i 2 o 1
+MC id 6 c Txc16 t Txc16 pid 1 n tic[4]
+MS id 6 d i=block/routing
+GC m 7 g 1048576 n gate$i i 0 o 0
+GC m 7 g 1572864 n gate$o i 0 o 1
+MC id 7 c Txc16 t Txc16 pid 1 n tic[5]
+MS id 7 d i=block/routing
+CC sm 2 sg 1572864 dm 3 dg 1048576
+CC sm 3 sg 1572864 dm 2 dg 1048576
+CC sm 3 sg 1572865 dm 4 dg 1048576
+CC sm 3 sg 1572866 dm 6 dg 1048576
+CC sm 4 sg 1572864 dm 3 dg 1048577
+CC sm 5 sg 1572864 dm 6 dg 1048577
+CC sm 6 sg 1572864 dm 3 dg 1048578
+CC sm 6 sg 1572865 dm 5 dg 1048576
+CC sm 6 sg 1572866 dm 7 dg 1048576
+CC sm 7 sg 1572864 dm 6 dg 1048578
+SB v 1025 rid Tictoc16-0-20120114-00:28:15-6116
+
+E # 6 t 0.5 m 3 msg -1
+BS id 0 tid 0 eid 0 etid 0 c TicTocMsg16 n tic-0-to-3 pe 6
+SH sm 3 sg 1572866
+ES t 0.6
+SE

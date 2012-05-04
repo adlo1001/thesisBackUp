@@ -1,0 +1,14 @@
+// to create the stubs and other files use the following command:
+// idlj -fall TimeZone.idl
+//
+module TimeZone
+{
+  interface Interface_TimeZone
+  {
+    string get_date();
+    string get_help();
+    string get_ids();
+    string get_time();
+    string set_timezone(in string timezone);
+  };
+};

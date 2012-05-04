@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0079)http://vision.ucsd.edu/project/globally-optimal-structure-and-motion-estimation -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Globally Optimal Structure and Motion Estimation | vision.ucsd.edu</title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  
+<link rel="shortcut icon" href="http://vision.ucsd.edu/sites/default/themes/vision/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" media="all" href="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/c43b7c40bd1b7de051aaba64e04d8325.css">
+  <script type="text/javascript" src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/5ffcf016ca4bb5305962a3832c6be738.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "popups": { "originalPath": "node/175", "defaultTargetSelector": "div.left-corner \x3e div.clear-block:last", "template": "\x3cdiv id=\"popups\"\x3e\n  \x3cdiv id=\"popups-title\"\x3e\n    \x3cdiv id=\"popups-close\"\x3e\x3ca href=\"#\"\x3eClose\x3c/a\x3e\x3c/div\x3e\n    \x3cdiv class=\"title\"\x3e%title\x3c/div\x3e\n    \x3cdiv class=\"clear-block\"\x3e\x3c/div\x3e\n  \x3c/div\x3e\n  \x3cdiv id=\"popups-body\"\x3e%body\x3c/div\x3e\n  \x3cdiv id=\"popups-buttons\"\x3e%buttons\x3c/div\x3e\n  \x3cdiv id=\"popups-footer\"\x3e\x3c/div\x3e\n\x3c/div\x3e\n", "modulePath": "sites/default/modules/popups", "popupFinalMessage": 1 } });
+//--><!]]>
+</script>
+<link type="text/css" rel="stylesheet" href="data:text/css,"><style>.lookupXHDMPN, .lookupforemostXHDMPN, .lookupdockedXHDMPN, .rowiframeXHDMPN, .celliframeXHDMPN, .iframeXHDMPN, .emptyXHDMPN, .barXHDMPN, .barforemostXHDMPN, .bardockedXHDMPN, .cellXHDMPN, .leftXHDMPN, .rightXHDMPN, .buttoncontainerXHDMPN, .buttonXHDMPN, .buttonimageXHDMPN, .waitingXHDMPN, .handleXHDMPN, .queryXHDMPN, .hintXHDMPN, .templateXHDMPN, .firstlevelgroupXHDMPN, .notfirstlevelgroupXHDMPN{
+	    background: none !important;
+	    border: 0px !important;
+	    border-style: none !important;
+	     color: black !important;
+	     direction: ltr !important;
+	     float: none !important;
+	     font-family: sans-serif !important;
+	     font-size: small !important;
+	     font-style: normal !important;
+	     font-variant: normal !important;
+	     font-weight: normal !important;
+	     letter-spacing: normal !important;
+	     line-height: normal !important;
+	     margin: 0px !important;
+	    padding: 0px !important;
+	    text-align: left !important;
+	     text-decoration: none !important;
+	     text-indent: 0px !important;
+	     text-transform: none !important;
+	     vertical-align: baseline !important;
+	    white-space: normal !important;
+}
+
+div.lookupXHDMPN{
+	     display: table !important;
+	     -webkit-transition: -webkit-box-shadow 0.25s linear, border-color 0.25s linear !important;
+}
+
+div.lookupforemostXHDMPN{
+}
+
+div.lookupdockedXHDMPN{
+}
+
+div.rowiframeXHDMPN{
+	     display: table-row !important;
+}
+
+div.rowiframeXHDMPN td.celliframeXHDMPN{
+	      display: table-cell !important;
+	      width: 100% !important;
+	      height: 100% !important;
+}
+
+td.celliframeXHDMPN iframe.iframeXHDMPN{
+	       display: inline !important;
+	       width: 100% !important;
+	       height: 100% !important;
+	       background-color: white !important;
+}
+
+iframe.emptyXHDMPN{
+	       background-image: url('chrome-extension://hljnlfolmbmibdjaikiaepgepgnldclj/img/128.png') !important;
+	       background-position: 50% 50% !important;
+	       background-repeat: no-repeat !important;
+}
+
+div.barXHDMPN{
+	     display: table-row !important;
+	     -webkit-transition: background 0.25s linear !important;
+	     width: 100% !important;
+	     cursor: move !important;
+	     background: lightgrey !important;
+}
+
+div.barforemostXHDMPN{
+	background: #84b7ea !important;
+}
+
+div.bardockedXHDMPN{
+	background: #336699 !important;
+}
+
+div.barXHDMPN div.cellXHDMPN{
+	     display: table-cell !important;
+	     vertical-align: middle !important;
+}
+
+div.leftXHDMPN{
+	     padding-right: 16px !important;
+	     text-align: left !important;
+}
+
+div.rightXHDMPN{
+	     white-space: nowrap !important;
+	     text-align: right !important;
+}
+
+span.buttoncontainerXHDMPN{
+	     display:inline !important;
+}
+
+a.buttonXHDMPN:link{
+	     display:inline !important;
+	     -webkit-user-select: none !important;
+	     color: transparent !important;
+}
+
+a.buttonXHDMPN img.buttonimageXHDMPN{
+	     display:inline !important;
+	     vertical-align: middle !important;
+}
+
+img.waitingXHDMPN{
+	     display:inline !important;
+	     cursor: pointer !important;
+	     -webkit-user-select: none !important;
+	     vertical-align: middle !important;
+	     padding-left: 6px !important;
+	 padding-right: 6px !important;
+}
+
+div.handleXHDMPN{
+	     display:block !important;
+	     cursor: se-resize !important;
+	     left: 100% !important;
+	     top: 100% !important;
+	     margin-left: -4px !important;
+	     margin-top: -4px !important;
+	     position: absolute !important;
+	     width: 8px !important;
+	 height: 8px !important;
+}
+
+input.queryXHDMPN{
+	     display:inline-block !important;
+	     background: white !important;
+	     vertical-align: top !important;
+	     border: 1px solid darkgrey !important;
+	      font-size: 13px !important;
+	      padding-top: 1px !important;
+	 padding-bottom: 1px !important;
+	     width: 12em !important;
+}
+
+.hintXHDMPN{
+	      color: lightgrey !important;
+	      font-style:italic !important;
+}
+
+select.templateXHDMPN{
+	     display:inline-block !important;
+	     background: white !important;
+	     font-size: 13px !important;
+	      border: 1px solid darkgrey !important;
+	      vertical-align: top !important;
+	     white-space: pre !important;
+	     width: 9em !important;
+	     margin-right: 2px !important;
+}
+
+optgroup.firstlevelgroupXHDMPN{
+	      color: blue !important;
+}
+
+.notfirstlevelgroupXHDMPN{
+	      color: black !important;
+}
+
+</style><style>.tipKRUOIC, .arrowKRUOIC, .arrowupKRUOIC, .arrowdownKRUOIC, .mainKRUOIC, .closeKRUOIC, .barKRUOIC, .rowKRUOIC, .cellKRUOIC, .leftKRUOIC, .rightKRUOIC, .displaytitleKRUOIC, .refreshKRUOIC, .pagingKRUOIC, .brandKRUOIC, .textKRUOIC, .leftlabelKRUOIC, .selectKRUOIC, .checkboxKRUOIC, .waitingKRUOIC, .buttoncontainerKRUOIC, .buttonKRUOIC, .buttonimageKRUOIC, .flagKRUOIC, .noticebarscontainerKRUOIC, .noticebarKRUOIC, .iframecontentKRUOIC{
+	    background: none !important;
+	    border: 0px !important;
+	    border-style: none !important;
+	     color: black !important;
+	     direction: ltr !important;
+	     float: none !important;
+	     font-family: sans-serif !important;
+	     font-size: small !important;
+	     font-style: normal !important;
+	     font-variant: normal !important;
+	     font-weight: normal !important;
+	     letter-spacing: normal !important;
+	     line-height: normal !important;
+	     margin: 0px !important;
+	    padding: 0px !important;
+	    text-align: left !important;
+	     text-decoration: none !important;
+	     text-indent: 0px !important;
+	     text-transform: none !important;
+	     vertical-align: baseline !important;
+	    white-space: normal !important;
+}
+
+div.tipKRUOIC{
+	     position: absolute !important;
+	     display:block !important;
+}
+
+div.arrowKRUOIC{
+	display:block !important;
+}
+
+canvas.arrowupKRUOIC{
+	      display: inline !important;
+	      vertical-align: bottom !important;
+}
+
+canvas.downupKRUOIC{
+	      display: inline !important;
+	      vertical-align: top !important;
+}
+
+div.mainKRUOIC{
+	display: block !important;
+}
+
+img.closeKRUOIC{
+	      display: block !important;
+	      -webkit-transition: opacity 0.5s linear !important;
+	      float: right !important;
+	      margin-right: -5px !important;
+	      margin-top: -5px !important;
+}
+
+div.barKRUOIC{
+	     display: table !important;
+	      margin-bottom: 4px !important;
+	     -webkit-user-select: none !important;
+	     width: 100% !important;
+}
+
+div.rowKRUOIC{
+	display: table-row !important;
+}
+
+div.cellKRUOIC{
+	      display: table-cell !important;
+	      vertical-align: middle !important;
+}
+
+.leftKRUOIC{
+	      padding-right: 16px !important;
+	      text-align: left !important;
+}
+
+.rightKRUOIC{
+	text-align: right !important;
+}
+
+span.refreshKRUOIC{
+	display: inline !important;
+}
+
+span.pagingKRUOIC{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+span.buttoncontainerKRUOIC{
+	display: inline !important;
+}
+
+span.displaytitleKRUOIC{
+	      display: inline !important;
+	      padding-left: 6px !important;
+	      font-size: small !important;
+	      font-weight: bold !important;
+}
+
+span.displaytitleKRUOIC a:link{
+	       display: inline !important;
+	       color: #0645AD !important;
+	       text-decoration: none !important;
+}
+
+span.displaytitleKRUOIC img{
+	display: inline !important;
+}
+
+span.brandKRUOIC{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+.brandKRUOIC a{
+	       display: inline !important;
+	       font-size: x-small !important;
+}
+
+.brandKRUOIC a:link{
+	       display: inline !important;
+	       color: #0645AD !important;
+	       text-decoration: none !important;
+}
+
+.brandKRUOIC a:visited{
+	       display: inline !important;
+	       color: #0B0080 !important;
+	       text-decoration: none !important;
+}
+
+span.textKRUOIC{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+label.leftlabelKRUOIC{
+	      display: inline !important;
+	      font-size: x-small !important;
+	      margin-right: 3px !important;
+}
+
+select.selectKRUOIC{
+	       display: inline-block !important;
+	       border: 1px solid darkgrey !important;
+	       white-space: pre !important;
+	       font-size: x-small !important;
+}
+
+input.checkboxKRUOIC{
+	      display: inline-block !important;
+	      vertical-align: text-top !important;
+	      font-size: x-small !important;
+	      margin-right: 0.3em !important;
+}
+
+img.waitingKRUOIC{
+	      display: inline !important;
+	      -webkit-user-select: none !important;
+	      vertical-align: middle !important;
+	      padding-left: 3px !important;
+}
+
+a.buttonKRUOIC, a.buttonKRUOIC:link{
+	      display: inline !important;
+	      -webkit-user-select: none !important;
+	      color: transparent !important;
+	      margin-right: 2px !important;
+}
+
+img.buttonimageKRUOIC{
+	      display: inline !important;
+	      vertical-align: middle !important;
+}
+
+img.flagKRUOIC{
+	      display: inline !important;
+	      vertical-align: middle !important;
+	      padding-bottom:2px !important;
+}
+
+img.buttonselectedKRUOIC{
+	      display: inline !important;
+	      background: #dd8 !important;
+	      border: 1px solid #bb6 !important;
+	      margin: -1px !important;
+	      border-radius: 2px !important;
+}
+
+div.noticebarscontainerKRUOIC{
+	     display: block !important;
+	     text-align: left !important;
+	     margin-bottom: 4px !important;
+	     overflow-y: auto !important;
+}
+
+div.noticebarKRUOIC{
+	     display: block !important;
+	     background: white !important;
+	     font-size: x-small !important;
+	     border-left: 3px solid lightGrey !important;
+	     margin-bottom: 1px !important;
+	     padding-left: 2px !important;
+}
+
+div.noticebarKRUOIC img{
+	      display: inline !important;
+	      margin-right: 1px !important;
+	      vertical-align: text-top !important;
+}
+
+div.noticebarKRUOIC a{
+	      display: inline !important;
+	      font-family: sans-serif !important;
+	       font-style: normal !important;
+	       font-variant: normal !important;
+	       font-weight: normal !important;
+	       font-size: x-small !important;
+}
+
+div.noticebarKRUOIC a:link{
+	      display: inline !important;
+	      color: #0645AD !important;
+	      text-decoration: none !important;
+}
+
+div.noticebarKRUOIC a:visited{
+	      display: inline !important;
+	      color: #0B0080 !important;
+	      text-decoration: none !important;
+}
+
+iframe.iframecontentKRUOIC{
+	     display: inline !important;
+	     width: 100% !important;
+}
+
+</style><style id="wrc-css" type="text/css">.wrcx {display:none} .r .wrcx, .osl .wrcx, .bc .wrcx, .fc .wrcx, #rhsline ol .wrcx {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey0-16.png") right no-repeat}
+.wrc0 {display:none} .r .wrc0, .osl .wrc0, .bc .wrc0, .fc .wrc0, #rhsline ol .wrc0 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey0-16.png") right no-repeat}
+.wrc11 {display:none} .r .wrc11, .osl .wrc11, .bc .wrc11, .fc .wrc11, #rhsline ol .wrc11 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green1-16.png") right no-repeat}
+.wrc12 {display:none} .r .wrc12, .osl .wrc12, .bc .wrc12, .fc .wrc12, #rhsline ol .wrc12 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green2-16.png") right no-repeat}
+.wrc13 {display:none} .r .wrc13, .osl .wrc13, .bc .wrc13, .fc .wrc13, #rhsline ol .wrc13 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green3-16.png") right no-repeat}
+.wrc21 {display:none} .r .wrc21, .osl .wrc21, .bc .wrc21, .fc .wrc21, #rhsline ol .wrc21 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow1-16.png") right no-repeat}
+.wrc22 {display:none} .r .wrc22, .osl .wrc22, .bc .wrc22, .fc .wrc22, #rhsline ol .wrc22 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow2-16.png") right no-repeat}
+.wrc23 {display:none} .r .wrc23, .osl .wrc23, .bc .wrc23, .fc .wrc23, #rhsline ol .wrc23 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow3-16.png") right no-repeat}
+.wrc31 {display:none} .r .wrc31, .osl .wrc31, .bc .wrc31, .fc .wrc31, #rhsline ol .wrc31 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red1-16.png") right no-repeat}
+.wrc32 {display:none} .r .wrc32, .osl .wrc32, .bc .wrc32, .fc .wrc32, #rhsline ol .wrc32 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red2-16.png") right no-repeat}
+.wrc33 {display:none} .r .wrc33, .osl .wrc33, .bc .wrc33, .fc .wrc33, #rhsline ol .wrc33 {display:inline; background: url("chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red3-16.png") right no-repeat}
+.wrc_icon{margin:0;padding:0;padding-left:15px !important;width:16px !important; height:16px !important;line-height:16px !important;}
+#wrchoverdiv{padding-bottom:20px; position:absolute; width:180px; background:transparent url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-body.jpg) top left repeat-x; display:none; font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif; font-size: 14px; z-index:9999999;}
+#wrchoverdiv{cursor:default;}
+#wrchoverdiv #wrccontainer{width:180px;}
+#wrchoverdiv #wrcheader{width:140px; height:42px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/logo.jpg) bottom left no-repeat; text-align:right; line-height:42px; color:orange; margin:0 auto;}
+#wrchoverdiv .wrchorizontal{width:180px; height:2px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/horizontal-line.jpg) bottom left no-repeat;}
+#wrchoverdiv #wrccurrentvote{height:25px; line-height:25px; color:#FFF; text-align:center; text-transform:uppercase;}
+#wrchoverdiv #wrcrating{margin:5px auto; width:69px; height:55px; background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png) bottom left no-repeat;}
+#wrchoverdiv #wrcrating.wrcbx{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png);}
+#wrchoverdiv #wrcrating.wrcb0{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/grey-0.png);}
+#wrchoverdiv #wrcrating.wrcb11{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-1.png);}
+#wrchoverdiv #wrcrating.wrcb12{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-2.png);}
+#wrchoverdiv #wrcrating.wrcb13{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/green-3.png);}
+#wrchoverdiv #wrcrating.wrcb21{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-1.png);}
+#wrchoverdiv #wrcrating.wrcb22{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-2.png);}
+#wrchoverdiv #wrcrating.wrcb23{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/yellow-3.png);}
+#wrchoverdiv #wrcrating.wrcb31{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-1.png);}
+#wrchoverdiv #wrcrating.wrcb32{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-2.png);}
+#wrchoverdiv #wrcrating.wrcb33{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/red-3.png);}
+#wrchoverdiv #wrcratingtext{margin:3px 5px; color:#FFF; text-align:center; padding:0; font-size:12px;}
+#wrchoverdiv #wrcweighttext{margin:3px 5px; color:#FFF; text-align:center; padding:0; font-size:12px;}
+#wrchoverdiv #wrcflags{width:150px; height:70px; margin:0 auto;}
+#wrchoverdiv .wrcicon{width:30px; height:30px; float:left;}
+#wrchoverdiv #wrcicon_shopping{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/shopping-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_shopping.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/shopping-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_social{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/social-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_social.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/social-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_news{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/news-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_news.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/news-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_it{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/it-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_it.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/it-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_corporate{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/corporate-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_corporate.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/corporate-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_pornography{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/pornography-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_pornography.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/pornography-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_violence{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/violence-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_violence.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/violence-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_gambling{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/gambling-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_gambling.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/gambling-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_drugs{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/drugs-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_drugs.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/drugs-small-selected.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_illegal{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/illegal-small-disable.png) top left no-repeat;}
+#wrchoverdiv #wrcicon_illegal.selected{background:url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/icons/illegal-small-selected.png) top left no-repeat;}
+</style><style id="simplehl_hlstyle_KKNYEU">.simplehl1_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,0,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl2_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,165,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl3_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,255,96,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl4_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(96,255,96,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl5_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(96,255,255,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl6_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,96,255,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl7_AEIJIU { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #ffffff!important; background-color: rgba(0,0,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } </style><style id="simplehl_flashstyle_VNFXXC">@-webkit-keyframes flash {         0% {             opacity: 1;         }         100% {             opacity: 0;         }}</style></head>
+
+<body link="#006699" vlink="#006699" alink="#006699" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" rightmargin="0" background="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/IMG_bgimg.gif" style="background-color:white;background-attachment:fixed;background-repeat:no-repeat;background-position:0 0;" class="popups-processed">
+
+<div class="hide"><a href="http://vision.ucsd.edu/project/globally-optimal-structure-and-motion-estimation#content" title="Skip navigation." accesskey="2">Skip navigation</a>.</div>
+
+
+<table style="border:2px solid #000000;margin-left:20px" width="720" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tbody><tr>
+    <td width="240" height="70" class="vision" id="top">
+      <a href="http://www.jacobsschool.ucsd.edu/"><img width="240" height="70" src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/jacobs_school.jpg" border="0"></a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>
+    </td><td width="240" height="70" class="vision" id="top" bgcolor="#000000">
+      <a href="http://www.cse.ucsd.edu/"><img src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/grayCSE.jpg" width="240" height="70" border="0"></a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>
+    </td>
+    <td width="240" height="70" class="vision" id="top">
+      <img src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/cse_building.jpg" width="240" height="70" border="0">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" class="vision" id="top">
+      <h1 id="top" class="vision"><a href="http://vision.ucsd.edu/">UCSD Computer Vision</a></h1>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" width="72-" height="90" class="vision" id="top">
+      <img src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/ff2top.png" width="720" height="120" border="0">
+    </td>
+  </tr>
+</tbody></table>
+
+
+<p style="margin-top: -10pt">
+</p><table bgcolor="#EEEEEE" width="720" style="text-align:center;margin-left:20px" cellpadding="0" cellspacing="0" border="0" height="0">
+  <tbody>
+    <tr>
+      <td>
+        <ul class="links" id="navlist"><li class="menu-241 first"><a href="http://vision.ucsd.edu/people" title="People">People</a></li>
+<li class="menu-258"><a href="http://vision.ucsd.edu/projects" title="Projects">Projects</a></li>
+<li class="menu-251"><a href="http://vision.ucsd.edu/biblio" title="Publications">Publications</a></li>
+<li class="menu-1594"><a href="http://vision.ucsd.edu/datasetsAll" title="">Datasets</a></li>
+<li class="menu-477 last"><a href="http://vision.ucsd.edu/content/misc" title="Misc">Misc</a></li>
+</ul>      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table cellpadding="15" cellspacing="0" width="720" style="margin-left:20px">
+  <tbody>
+    <!-- Do not display the left sidebar -->
+<!--  <tr>
+        <td id="sidebar-left">
+          </td>
+      </tr>-->
+  <tr>
+    <td valign="top">
+                            
+          
+        
+        
+        
+      <!-- start main content -->
+      <div class="node">
+        <div class="content">
+<p></p><h1 class="vision" style="text-align:center;">Globally Optimal Structure and Motion Estimation</h1><p></p>
+
+<!-- Developed by -->
+<p style="text-align:center;" class="vision">
+  <a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Manmohan Chandraker</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Sameer Agarwal</a>, <a href="http://vision.ucsd.edu/person/fredrik-kahl" class="vision">Fredrik Kahl</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">David Kriegman</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Serge Belongie</a></p>
+<br>
+
+
+<table class="vision" summary="" cellpadding="2">
+  <tbody style="border-top:none">
+    <tr>
+      <td style="padding-right:20px">
+        <!-- Summary -->
+        <h2 class="vision">Synopsis</h2><p class="vision">In this line of work, we persent globally optimal solutions to several important problems in multiview geometry. Structure from motion problems are inherently non-convex and these works rely on efficient construction of relaxations using developments in convex optimization and algebraic geometry.</p>      </td>
+      <td>
+        <img src="./Globally Optimal Structure and Motion Estimation   vision.ucsd.edu_files/multiview1.png" style="max-width:250px; max-height:250px">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="vision"> More info on: <a class="vision" href="http://vision.ucsd.edu/~manu/research.html#global">http://vision.ucsd.edu/~manu/research.html#global</a><br></p>
+<!-- Other People -->
+<hr class="vision"><h2 class="vision">Non UCSD Vision People also Involved</h2><p>David Nistér (Microsoft Research)</p>
+
+<!-- Body -->
+
+<!-- Downloads -->
+
+<!-- External Links -->
+
+<!-- Related Publications -->
+<hr class="vision"><h2 class="vision">Related Publications</h2><div class="biblio-inline"><div class="biblio-year">2009</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"Globally Optimal Algorithms for Stratified Autocalibration", </span> 
+<i>International Journal of Computer Vision (IJCV)</i>, no. to appear, 2009.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.genre=article&amp;rft.atitle=Globally+Optimal+Algorithms+for+Stratified+Autocalibration&amp;rft.title=International+Journal+of+Computer+Vision+%28IJCV%29&amp;rft.date=2009&amp;rft.aulast=Chandraker&amp;rft.aufirst=Manmohan&amp;rft.au=Chandraker%2C+Manmohan&amp;rft.au=Agarwal%2C+Sameer&amp;rft.au=Kriegman%2C+David&amp;rft.au=Belongie%2C+Serge"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/246/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]</div>
+<div class="biblio-year">2008</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, </span> 
+<span class="biblio-title">"Globally Optimal Bilinear Programming for Computer Vision Applications", </span> 
+<i>CVPR</i>, Anchorage, Alaska, 06/2008.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.title=Globally+Optimal+Bilinear+Programming+for+Computer+Vision+Applications&amp;rft.date=2008&amp;rft.aulast=Chandraker&amp;rft.aufirst=Manmohan&amp;rft.au=Chandraker%2C+Manmohan&amp;rft.au=Kriegman%2C+David&amp;rft.place=Anchorage%2C+Alaska"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/193/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/fredrik-kahl" class="vision">Kahl F.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"Practical Global Optimization for Multiview Geometry", </span> 
+<i>IJCV</i>, vol. 79, no. 3, pp. 271-284, 2008.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu%2Fdrupal&amp;rft.genre=article&amp;rft.atitle=Practical+Global+Optimization+for+Multiview+Geometry&amp;rft.title=IJCV&amp;rft.date=2008&amp;rft.volume=79&amp;rft.spage=271&amp;rft.epage=284&amp;rft.aulast=Kahl&amp;rft.aufirst=Fredrik&amp;rft.au=Belongie%2C+Serge"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/138/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]<span class="biblio_file_links">[<a href="http://vision.ucsd.edu/sites/default/files/kahl-agarwal-etal-ijcv-07.pdf" class="vision">pdf</a>]</span></div>
+<div class="biblio-year">2007</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/fredrik-kahl" class="vision">Kahl F.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, <a href="http://vision.ucsd.edu/biblio/author/138" class="vision">Nister D.</a>, </span> 
+<span class="biblio-title">"Autocalibration via Rank-Constrained Estimation of the Absolute Quadric", </span> 
+<i>CVPR</i>, Minneapolis, 2007.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.title=Autocalibration+via+Rank-Constrained+Estimation+of+the+Absolute+Quadric&amp;rft.date=2007&amp;rft.aulast=Chandraker&amp;rft.aufirst=Manmohan&amp;rft.au=Chandraker%2C+Manmohan&amp;rft.au=Agarwal%2C+Sameer&amp;rft.au=Kahl%2C+Fredrik&amp;rft.au=Kriegman%2C+David&amp;rft.au=Nister%2C+David&amp;rft.place=Minneapolis"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/218/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"Globally Optimal Affine and Metric Upgrades in Stratified Autocalibration", </span> 
+<i>ICCV</i>, 2007.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.title=Globally+Optimal+Affine+and+Metric+Upgrades+in+Stratified+Autocalibration&amp;rft.date=2007&amp;rft.aulast=Chandraker&amp;rft.aufirst=Manmohan&amp;rft.au=Chandraker%2C+Manmohan&amp;rft.au=Agarwal%2C+Sameer&amp;rft.au=Kriegman%2C+David&amp;rft.au=Belongie%2C+Serge"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/197/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]</div>
+<div class="biblio-year">2006</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/manmohan-chandraker" class="vision">Chandraker M.</a>, <a href="http://vision.ucsd.edu/person/fredrik-kahl" class="vision">Kahl F.</a>, <a href="http://vision.ucsd.edu/person/david-kriegman" class="vision">Kriegman D.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"Practical Global Optimization for Multiview Geometry ", </span> 
+<i>European Conference on Computer Vision (ECCV)</i>, vol. 1, Graz, Austria, pp. 592-605, 2006.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu%2Fdrupal&amp;rft.title=Practical+Global+Optimization+for+Multiview+Geometry+&amp;rft.date=2006&amp;rft.volume=1&amp;rft.spage=592&amp;rft.epage=605&amp;rft.aulast=Agarwal&amp;rft.aufirst=Sameer&amp;rft.au=Belongie%2C+Serge&amp;rft.place=Graz%2C+Austria"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/126/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]<span class="biblio_file_links">[<a href="http://vision.ucsd.edu/sites/default/files/eccv06.pdf" class="vision">pdf</a>]</span></div>
+</div></div>
+    </div>
+            <!-- end main content -->
+
+      <!-- Display the login link, but only on the first page and if nobody is logged in -->
+          </td>
+    <!-- Display the right sidebar only when a user is logged in -->
+      </tr>
+</tbody>
+</table>
+
+
+
+
+
+<div id="wrchoverdiv"><div id="wrccontainer"><div id="wrcheader"><div id="wrctitle"> WebRep</div></div><div class="wrchorizontal"></div><div id="wrccurrentvote">Overall rating</div><div class="wrchorizontal"></div><div id="wrcrating"></div><div id="wrcratingtext">This site has no rating</div><div id="wrcweighttext">(not enough votes)</div><div id="wrcflags"><div id="wrcicon_shopping" class="wrcicon"></div><div id="wrcicon_social" class="wrcicon"></div><div id="wrcicon_news" class="wrcicon"></div><div id="wrcicon_it" class="wrcicon"></div><div id="wrcicon_corporate" class="wrcicon"></div><div id="wrcicon_pornography" class="wrcicon"></div><div id="wrcicon_violence" class="wrcicon"></div><div id="wrcicon_gambling" class="wrcicon"></div><div id="wrcicon_drugs" class="wrcicon"></div><div id="wrcicon_illegal" class="wrcicon"></div></div><div class="wrchorizontal"></div></div></div></body></html>

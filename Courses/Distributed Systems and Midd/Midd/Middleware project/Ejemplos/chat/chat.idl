@@ -1,0 +1,14 @@
+module chat {
+
+  typedef string Message;
+
+  interface ChatClient {
+    void printMsg(in Message msg);
+  };
+
+  interface ChatServer {
+    void addClient(in ChatClient client);
+    void fwdMsg(in Message msg);
+  };
+};
+

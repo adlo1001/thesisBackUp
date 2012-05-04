@@ -1,0 +1,922 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\begin_preamble
+
+
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{fancyhdr}
+
+
+
+\usepackage{babel}
+\usepackage{calc}
+  
+
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+
+
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\addto\extrasenglish{%
+ \renewcommand*{\equationautorefname}[1]{}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+
+\let\myTOC\tableofcontents
+\renewcommand{\tableofcontents}{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\renewcommand{\bottomfraction}{0.5}
+
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+
+
+\setlength{\headheight}{14pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end_preamble
+\options intoc,titlepage,fleqn
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding latin9
+\fontencoding T1
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 2
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes true
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\author 1582800154 "Rodrigo José Ortiz Cayón" rodrygojose@gmail.com
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Real-Time Video Stabilization for UAV
+\end_layout
+
+\begin_layout Author
+Rodrigo Jose Ortiz Cayon
+\change_inserted 1582800154 1336056576
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Front-page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "Front-page.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Dedication
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Dedication.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Abstract
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Abstract.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Acknowledgement
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Acknowledgements.lyx"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{fancy}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%% Content
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead[
+\backslash
+leftmark]{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rhead[]{
+\backslash
+leftmark} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+addcontentsline{toc}{chapter}{Content}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%_______________________________________________________________________________
+_____
+\change_deleted 1582800154 1336069422
+_
+\change_inserted 1582800154 1336069437
+%% Chapters 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 1582800154 1336069437
+
+
+\backslash
+lhead[
+\backslash
+leftmark]{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 1582800154 1336069437
+
+
+\backslash
+rhead[]{
+\backslash
+leftmark} 
+\change_deleted 1582800154 1336069422
+________________
+\change_unchanged
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_inserted 1582800154 1336069442
+
+\end_layout
+
+\end_inset
+
+
+\change_inserted 1582800154 1336069451
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\change_inserted 1582800154 1336069459
+Words to include
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1582800154 1336069483
+whereby: by which (a travez del cual)
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1582800154 1336069502
+whereas: in contrast (mientras que)
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1582800154 1336069518
+in a wider sense
+\end_layout
+
+\begin_layout Itemize
+
+\change_inserted 1582800154 1336069525
+the former --> the later
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_deleted 1582800154 1336069435
+
+%% Chapters 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_deleted 1582800154 1336069435
+
+
+\backslash
+lhead[
+\backslash
+leftmark]{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\change_deleted 1582800154 1336069435
+
+
+\backslash
+rhead[]{
+\backslash
+leftmark} 
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\change_deleted 1582800154 1336058429
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Organize ideas
+\end_layout
+
+\begin_layout Plain Layout
+think --> write in paper --> plan structural flow of one idea to other
+\end_layout
+
+\begin_layout Plain Layout
+Look out for;
+\end_layout
+
+\begin_layout Itemize
+Very long sentences.
+ Shorter sentences are usually better.
+ Only make them longer if it makes your point clearer.
+ 
+\end_layout
+
+\begin_layout Itemize
+Repetition of the same words in a single sentence
+\end_layout
+
+\end_inset
+
+
+\change_unchanged
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-1.lyx"
+
+\end_inset
+
+
+\change_deleted 1582800154 1336058778
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+---Modify, move or cut.
+ Those are your options! This is the hardest part of writing, but that’s
+ exactly why you have to do it while the idea is still fresh in your head.
+\end_layout
+
+\begin_layout Itemize
+Does the sentence look OK on it’s own? 
+\end_layout
+
+\begin_layout Itemize
+Does it fit where you have put it? or should it go somewhere earlier in
+ the section? or does it need another sentence before it to help it make
+ sense? 
+\end_layout
+
+\begin_layout Itemize
+Or should you cut it? 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+http://www.ozline.com/electraguide/index.php
+\end_layout
+
+\end_inset
+
+ 
+\change_unchanged
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 2
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-2.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 3
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-3.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 4
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-4.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 5
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-5.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Chapter 6
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Chapters/Chapter-6.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%_______________________________________________________________________________
+\change_inserted 1582800154 1336059017
+%% Appendices
+\change_deleted 1582800154 1336059020
+______________________
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\change_deleted 1582800154 1336059014
+
+%% Appendices
+\change_unchanged
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\start_of_appendix
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Apendix A
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Appendices/Appendix-A.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Apendix B
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Appendices/Appendix-B.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Apendix C
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand include
+filename "Appendices/Appendix-C.lyx"
+
+\end_inset
+
+ 
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Bibliography
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Thesis"
+options "plain"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{chapter}{Bibliography}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

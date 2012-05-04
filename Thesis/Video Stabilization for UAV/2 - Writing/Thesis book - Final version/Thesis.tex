@@ -1,0 +1,152 @@
+\documentclass[11pt,a4paper,english,intoc,titlepage,fleqn]{book}
+
+\usepackage{lmodern}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage{nomencl}
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+	bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+	breaklinks=false,pdfborder={0 0 1},backref=section,colorlinks=false]
+	{hyperref}
+  
+\makeatletter
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
+
+\newcommand{\noun}[1]{\textsc{#1}}
+
+\@ifundefined{date}{}{\date{}}
+
+\AtBeginDocument{\renewcommand{\ref}[1]{\mbox{\autoref{#1}}}}
+\addto\extrasenglish{%
+ \renewcommand*{\equationautorefname}[1]{}
+ \renewcommand{\sectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\subsubsectionautorefname}{sec.\negthinspace}
+ \renewcommand{\figureautorefname}{Fig.\negthinspace}
+ \renewcommand{\tableautorefname}{Tab.\negthinspace}
+}
+
+\let\myTOC\tableofcontents
+\renewcommand\tableofcontents{%
+  \frontmatter
+  \pdfbookmark[1]{\contentsname}{}
+  \myTOC
+  \mainmatter }
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\renewcommand{\bottomfraction}{0.5}
+
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\makeatother
+\pagestyle{empty}
+\setlength{\headheight}{14pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Title of the thesis}
+\author{Rodrigo Jose Ortiz Cayon}
+\date{2012}
+
+%% Front-page
+\include{Front-page}
+\thispagestyle{empty} 
+\cleardoublepage
+
+\normalfont 
+
+%% Dedication
+\include{Dedication}
+\thispagestyle{empty}  
+\cleardoublepage
+
+\pagenumbering{Roman}
+
+%% Abstract
+\include{Abstract}
+\cleardoublepage{}
+
+%% Acknowledgement
+\include{Acknowledgements}
+\thispagestyle{empty} 
+\cleardoublepage{}
+
+\pagestyle{fancy}
+
+%% Content
+\lhead[\leftmark]{}	
+\rhead[]{\leftmark}
+
+\tableofcontents{} 
+%\addcontentsline{toc}{chapter}{Contents} 
+\cleardoublepage{}
+
+%________________________________________________
+%% Chapters 
+\lhead[\chaptername~\thechapter]{\leftmark}	
+\rhead[\leftmark]{\chaptername~\thechapter}
+
+%% Chapter 1
+\include{./Chapters/Chapter-1}
+\cleardoublepage{}
+
+%% Chapter 2
+\include{./Chapters/Chapter-2}
+\cleardoublepage{}
+
+%% Chapter 3
+\include{./Chapters/Chapter-3}
+\cleardoublepage{}
+
+%% Chapter 4
+\include{./Chapters/Chapter-4}
+\cleardoublepage{}
+
+%% Chapter 5
+\include{./Chapters/Chapter-5}
+\cleardoublepage{}
+
+%% Chapter 6
+\include{./Chapters/Chapter-6}
+\cleardoublepage{}
+
+%________________________________________________
+%% Appendices
+\appendix
+
+%% Apendix A
+\include{./Appendices/Appendix-A}
+\cleardoublepage{}
+
+%% Apendix B
+\include{./Appendices/Appendix-B}
+\cleardoublepage{}
+
+%% Apendix C
+\include{./Appendices/Appendix-C}
+\cleardoublepage{}
+
+%% Bibliography
+\bibliographystyle{plain}
+\bibliography{Thesis}
+\addcontentsline{toc}{chapter}{Bibliography} 
+
+\end{document}

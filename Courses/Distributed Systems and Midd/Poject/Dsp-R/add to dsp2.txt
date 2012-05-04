@@ -1,0 +1,35 @@
+omnetpp.ini
+
+seed-0-mt=532567 #532569 # or any other 32-bit value
+record-eventlog = true
+
+
+_____________________________________________________
+
+
+
+broker.ned
+
+parameters:
+                @display("i=block/network2,gold"); // add a default icon
+
+
+__________________________________________________
+
+client.ned
+
+    parameters:
+        @display("i=block/users"); // add a default icon
+    			//@display("bgb=376,99;bgl=3");    
+
+
+____________________________________
+
+User.cc
+
+bubbleMsj = "Subscribe for: " + topics[actionTopicIdx];
+			bubble( bubbleMsj );
+
+
+________________________________________
+

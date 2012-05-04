@@ -1,0 +1,38 @@
+file 13700 1326813275                                           
+version 2
+run General-0-20120117-15:25:42-3948
+attr configname General
+attr datetime 20120117-15:25:42
+attr experiment General
+attr inifile C:/omnetpp/omnetpp-4.1/samples/dsp2/omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network SimulationNet
+attr processid 3948
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 1  SimulationNet.clients[0].user  requestType:vector  ETV
+attr interpolationmode  none
+attr source  arrival
+attr title  "Request Type, vector"
+vector 0  SimulationNet.internet  delayOnInternet:vector  ETV
+attr interpolationmode  none
+attr source  delay
+attr title  "Delay on Internet, vector"
+vector 2  SimulationNet.clients[1].user  requestType:vector  ETV
+attr interpolationmode  none
+attr source  arrival
+attr title  "Request Type, vector"
+vector 3  SimulationNet.clients[2].user  requestType:vector  ETV
+attr interpolationmode  none
+attr source  arrival
+attr title  "Request Type, vector"
+0	1038 9796 7 1805 1.881743997444 213.718281974898 241 0.0020158900780108 4.4427374530591 194.43249675034 316.25474348314
+1	10834 740 3 1718 1.881743997444 209.194520095988 29 1 2 32 38
+2	11574 996 25 1693 10.277711808805 208.263489863656 39 1 2 43 51
+3	12570 1130 55 1801 11.948810596123 213.718281974898 44 1 3 49 61

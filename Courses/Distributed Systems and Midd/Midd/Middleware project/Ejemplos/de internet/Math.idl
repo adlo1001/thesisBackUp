@@ -1,0 +1,29 @@
+// to create the stubs and other files use the following command:
+// idlj -fall Math.idl
+module My_Math
+{
+  const long SIZE_MAX=100;
+  struct Result{
+   float  result[SIZE_MAX][SIZE_MAX];
+   long line_result;
+   long row_result;
+   string msg;
+   string e;
+  };	
+ struct My_Array{
+   float bi_array[SIZE_MAX][SIZE_MAX];
+  }; 
+  interface Interface_Math
+  {
+    Result addition(in My_Array a, in long line_a, in long row_a, in My_Array b, in long line_b, in long row_b);
+//
+    string get_help();
+//
+    Result multiplication(in My_Array a, in long line_a, in long row_a, in My_Array b, in long line_b, in long row_b);
+//
+    Result subtraction(in My_Array a, in long line_a, in long row_a, in My_Array b, in long line_b, in long row_b);
+//
+    Result transpose(in My_Array a, in long line_a, in long row_a);
+//
+  };
+};

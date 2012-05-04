@@ -1,0 +1,88 @@
+diff -Naur acse_1.1.0/acse/Acse.lex acse_1.1.0_onflaggosub/acse/Acse.lex
+--- acse_1.1.0/acse/Acse.lex	2011-06-30 23:47:00.364444503 +0200
++++ acse_1.1.0_onflaggosub/acse/Acse.lex	2011-09-26 19:38:31.776469155 +0200
+@@ -98,6 +98,12 @@
+ "return"          { return RETURN; }
+ "read"            { return READ; }
+ "write"           { return WRITE; }
++"on"		  { return ON; }
++"zero"		  { return ZERO_FLAG; }
++"notzero"	  { return NOTZERO_FLAG; }
++"neg"		  { return NEG_FLAG; }
++"pos"		  { return POS_FLAG; }
++"run"		  { return RUN; }
+ 
+ {ID}              { yylval.svalue=strdup(yytext); return IDENTIFIER; }
+ {DIGIT}+          { yylval.intval = atoi( yytext );
+diff -Naur acse_1.1.0/acse/Acse.y acse_1.1.0_onflaggosub/acse/Acse.y
+--- acse_1.1.0/acse/Acse.y	2011-06-30 23:47:00.454444016 +0200
++++ acse_1.1.0_onflaggosub/acse/Acse.y	2011-09-26 19:57:49.343531409 +0200
+@@ -123,6 +123,12 @@
+ %token READ
+ %token WRITE
+ 
++%token <label> ON
++%token ZERO_FLAG
++%token NOTZERO_FLAG
++%token NEG_FLAG
++%token POS_FLAG
++%token RUN
+ %token <label> DO
+ %token <while_stmt> WHILE
+ %token <label> IF
+@@ -251,6 +257,7 @@
+             | while_statement            { /* does nothing */ }
+             | do_while_statement SEMI    { /* does nothing */ }
+             | return_statement SEMI      { /* does nothing */ }
++	    | onflag_statement 	 	 { /* does nothing */ }
+ ;
+ 
+ read_write_statement : read_statement  { /* does nothing */ }
+@@ -306,6 +313,47 @@
+             }
+ ;
+             
++onflag_statement : ON ZERO_FLAG RUN 
++		  {
++		    $1=newLabel(program);
++		    gen_bne_instruction(program,$1,0);
++		  } 
++		  code_block 
++		  {
++		    assignLabel(program,$1);
++		  }
++
++		| ON NOTZERO_FLAG RUN 
++		  {
++		    $1=newLabel(program);
++		    gen_beq_instruction(program,$1,0);
++		  } 
++		  code_block 
++		  { 
++		    assignLabel(program,$1);
++		  }
++		
++		| ON POS_FLAG RUN 
++		  {		    
++		    $1=newLabel(program);
++		    gen_bmi_instruction(program,$1,0);
++		  } 
++		  code_block 
++		  {
++		   assignLabel(program,$1);
++		  }
++		
++	        | ON NEG_FLAG RUN 
++		  {
++		    $1=newLabel(program);
++		    gen_bpl_instruction(program,$1,0);
++		  } 
++		  code_block 
++		  {
++		   assignLabel(program,$1);
++		  }
++;
++
+ if_statement   : if_stmt
+                {
+                   /* fix the `label_else' */

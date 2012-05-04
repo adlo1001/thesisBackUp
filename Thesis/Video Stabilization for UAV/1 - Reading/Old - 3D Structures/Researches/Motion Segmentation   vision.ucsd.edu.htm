@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)http://vision.ucsd.edu/project/motion-segmentation -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Motion Segmentation | vision.ucsd.edu</title>
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  
+<link rel="shortcut icon" href="http://vision.ucsd.edu/sites/default/themes/vision/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" media="all" href="./Motion Segmentation   vision.ucsd.edu_files/c43b7c40bd1b7de051aaba64e04d8325.css">
+  <script type="text/javascript" src="./Motion Segmentation   vision.ucsd.edu_files/5ffcf016ca4bb5305962a3832c6be738.js"></script><link type="text/css" rel="stylesheet" href="data:text/css,">
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "popups": { "originalPath": "node/39", "defaultTargetSelector": "div.left-corner \x3e div.clear-block:last", "template": "\x3cdiv id=\"popups\"\x3e\n  \x3cdiv id=\"popups-title\"\x3e\n    \x3cdiv id=\"popups-close\"\x3e\x3ca href=\"#\"\x3eClose\x3c/a\x3e\x3c/div\x3e\n    \x3cdiv class=\"title\"\x3e%title\x3c/div\x3e\n    \x3cdiv class=\"clear-block\"\x3e\x3c/div\x3e\n  \x3c/div\x3e\n  \x3cdiv id=\"popups-body\"\x3e%body\x3c/div\x3e\n  \x3cdiv id=\"popups-buttons\"\x3e%buttons\x3c/div\x3e\n  \x3cdiv id=\"popups-footer\"\x3e\x3c/div\x3e\n\x3c/div\x3e\n", "modulePath": "sites/default/modules/popups", "popupFinalMessage": 1 } });
+//--><!]]>
+</script>
+<style>.lookupSPODGQ, .lookupforemostSPODGQ, .lookupdockedSPODGQ, .rowiframeSPODGQ, .celliframeSPODGQ, .iframeSPODGQ, .emptySPODGQ, .barSPODGQ, .barforemostSPODGQ, .bardockedSPODGQ, .cellSPODGQ, .leftSPODGQ, .rightSPODGQ, .buttoncontainerSPODGQ, .buttonSPODGQ, .buttonimageSPODGQ, .waitingSPODGQ, .handleSPODGQ, .querySPODGQ, .hintSPODGQ, .templateSPODGQ, .firstlevelgroupSPODGQ, .notfirstlevelgroupSPODGQ{
+	    background: none !important;
+	    border: 0px !important;
+	    border-style: none !important;
+	     color: black !important;
+	     direction: ltr !important;
+	     float: none !important;
+	     font-family: sans-serif !important;
+	     font-size: small !important;
+	     font-style: normal !important;
+	     font-variant: normal !important;
+	     font-weight: normal !important;
+	     letter-spacing: normal !important;
+	     line-height: normal !important;
+	     margin: 0px !important;
+	    padding: 0px !important;
+	    text-align: left !important;
+	     text-decoration: none !important;
+	     text-indent: 0px !important;
+	     text-transform: none !important;
+	     vertical-align: baseline !important;
+	    white-space: normal !important;
+}
+
+div.lookupSPODGQ{
+	     display: table !important;
+	     -webkit-transition: -webkit-box-shadow 0.25s linear, border-color 0.25s linear !important;
+}
+
+div.lookupforemostSPODGQ{
+}
+
+div.lookupdockedSPODGQ{
+}
+
+div.rowiframeSPODGQ{
+	     display: table-row !important;
+}
+
+div.rowiframeSPODGQ td.celliframeSPODGQ{
+	      display: table-cell !important;
+	      width: 100% !important;
+	      height: 100% !important;
+}
+
+td.celliframeSPODGQ iframe.iframeSPODGQ{
+	       display: inline !important;
+	       width: 100% !important;
+	       height: 100% !important;
+	       background-color: white !important;
+}
+
+iframe.emptySPODGQ{
+	       background-image: url('chrome-extension://hljnlfolmbmibdjaikiaepgepgnldclj/img/128.png') !important;
+	       background-position: 50% 50% !important;
+	       background-repeat: no-repeat !important;
+}
+
+div.barSPODGQ{
+	     display: table-row !important;
+	     -webkit-transition: background 0.25s linear !important;
+	     width: 100% !important;
+	     cursor: move !important;
+	     background: lightgrey !important;
+}
+
+div.barforemostSPODGQ{
+	background: #84b7ea !important;
+}
+
+div.bardockedSPODGQ{
+	background: #336699 !important;
+}
+
+div.barSPODGQ div.cellSPODGQ{
+	     display: table-cell !important;
+	     vertical-align: middle !important;
+}
+
+div.leftSPODGQ{
+	     padding-right: 16px !important;
+	     text-align: left !important;
+}
+
+div.rightSPODGQ{
+	     white-space: nowrap !important;
+	     text-align: right !important;
+}
+
+span.buttoncontainerSPODGQ{
+	     display:inline !important;
+}
+
+a.buttonSPODGQ:link{
+	     display:inline !important;
+	     -webkit-user-select: none !important;
+	     color: transparent !important;
+}
+
+a.buttonSPODGQ img.buttonimageSPODGQ{
+	     display:inline !important;
+	     vertical-align: middle !important;
+}
+
+img.waitingSPODGQ{
+	     display:inline !important;
+	     cursor: pointer !important;
+	     -webkit-user-select: none !important;
+	     vertical-align: middle !important;
+	     padding-left: 6px !important;
+	 padding-right: 6px !important;
+}
+
+div.handleSPODGQ{
+	     display:block !important;
+	     cursor: se-resize !important;
+	     left: 100% !important;
+	     top: 100% !important;
+	     margin-left: -4px !important;
+	     margin-top: -4px !important;
+	     position: absolute !important;
+	     width: 8px !important;
+	 height: 8px !important;
+}
+
+input.querySPODGQ{
+	     display:inline-block !important;
+	     background: white !important;
+	     vertical-align: top !important;
+	     border: 1px solid darkgrey !important;
+	      font-size: 13px !important;
+	      padding-top: 1px !important;
+	 padding-bottom: 1px !important;
+	     width: 12em !important;
+}
+
+.hintSPODGQ{
+	      color: lightgrey !important;
+	      font-style:italic !important;
+}
+
+select.templateSPODGQ{
+	     display:inline-block !important;
+	     background: white !important;
+	     font-size: 13px !important;
+	      border: 1px solid darkgrey !important;
+	      vertical-align: top !important;
+	     white-space: pre !important;
+	     width: 9em !important;
+	     margin-right: 2px !important;
+}
+
+optgroup.firstlevelgroupSPODGQ{
+	      color: blue !important;
+}
+
+.notfirstlevelgroupSPODGQ{
+	      color: black !important;
+}
+
+</style><style>.tipGJHSRS, .arrowGJHSRS, .arrowupGJHSRS, .arrowdownGJHSRS, .mainGJHSRS, .closeGJHSRS, .barGJHSRS, .rowGJHSRS, .cellGJHSRS, .leftGJHSRS, .rightGJHSRS, .displaytitleGJHSRS, .refreshGJHSRS, .pagingGJHSRS, .brandGJHSRS, .textGJHSRS, .leftlabelGJHSRS, .selectGJHSRS, .checkboxGJHSRS, .waitingGJHSRS, .buttoncontainerGJHSRS, .buttonGJHSRS, .buttonimageGJHSRS, .flagGJHSRS, .noticebarscontainerGJHSRS, .noticebarGJHSRS, .iframecontentGJHSRS{
+	    background: none !important;
+	    border: 0px !important;
+	    border-style: none !important;
+	     color: black !important;
+	     direction: ltr !important;
+	     float: none !important;
+	     font-family: sans-serif !important;
+	     font-size: small !important;
+	     font-style: normal !important;
+	     font-variant: normal !important;
+	     font-weight: normal !important;
+	     letter-spacing: normal !important;
+	     line-height: normal !important;
+	     margin: 0px !important;
+	    padding: 0px !important;
+	    text-align: left !important;
+	     text-decoration: none !important;
+	     text-indent: 0px !important;
+	     text-transform: none !important;
+	     vertical-align: baseline !important;
+	    white-space: normal !important;
+}
+
+div.tipGJHSRS{
+	     position: absolute !important;
+	     display:block !important;
+}
+
+div.arrowGJHSRS{
+	display:block !important;
+}
+
+canvas.arrowupGJHSRS{
+	      display: inline !important;
+	      vertical-align: bottom !important;
+}
+
+canvas.downupGJHSRS{
+	      display: inline !important;
+	      vertical-align: top !important;
+}
+
+div.mainGJHSRS{
+	display: block !important;
+}
+
+img.closeGJHSRS{
+	      display: block !important;
+	      -webkit-transition: opacity 0.5s linear !important;
+	      float: right !important;
+	      margin-right: -5px !important;
+	      margin-top: -5px !important;
+}
+
+div.barGJHSRS{
+	     display: table !important;
+	      margin-bottom: 4px !important;
+	     -webkit-user-select: none !important;
+	     width: 100% !important;
+}
+
+div.rowGJHSRS{
+	display: table-row !important;
+}
+
+div.cellGJHSRS{
+	      display: table-cell !important;
+	      vertical-align: middle !important;
+}
+
+.leftGJHSRS{
+	      padding-right: 16px !important;
+	      text-align: left !important;
+}
+
+.rightGJHSRS{
+	text-align: right !important;
+}
+
+span.refreshGJHSRS{
+	display: inline !important;
+}
+
+span.pagingGJHSRS{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+span.buttoncontainerGJHSRS{
+	display: inline !important;
+}
+
+span.displaytitleGJHSRS{
+	      display: inline !important;
+	      padding-left: 6px !important;
+	      font-size: small !important;
+	      font-weight: bold !important;
+}
+
+span.displaytitleGJHSRS a:link{
+	       display: inline !important;
+	       color: #0645AD !important;
+	       text-decoration: none !important;
+}
+
+span.displaytitleGJHSRS img{
+	display: inline !important;
+}
+
+span.brandGJHSRS{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+.brandGJHSRS a{
+	       display: inline !important;
+	       font-size: x-small !important;
+}
+
+.brandGJHSRS a:link{
+	       display: inline !important;
+	       color: #0645AD !important;
+	       text-decoration: none !important;
+}
+
+.brandGJHSRS a:visited{
+	       display: inline !important;
+	       color: #0B0080 !important;
+	       text-decoration: none !important;
+}
+
+span.textGJHSRS{
+	      display: inline !important;
+	      font-size: x-small !important;
+}
+
+label.leftlabelGJHSRS{
+	      display: inline !important;
+	      font-size: x-small !important;
+	      margin-right: 3px !important;
+}
+
+select.selectGJHSRS{
+	       display: inline-block !important;
+	       border: 1px solid darkgrey !important;
+	       white-space: pre !important;
+	       font-size: x-small !important;
+}
+
+input.checkboxGJHSRS{
+	      display: inline-block !important;
+	      vertical-align: text-top !important;
+	      font-size: x-small !important;
+	      margin-right: 0.3em !important;
+}
+
+img.waitingGJHSRS{
+	      display: inline !important;
+	      -webkit-user-select: none !important;
+	      vertical-align: middle !important;
+	      padding-left: 3px !important;
+}
+
+a.buttonGJHSRS, a.buttonGJHSRS:link{
+	      display: inline !important;
+	      -webkit-user-select: none !important;
+	      color: transparent !important;
+	      margin-right: 2px !important;
+}
+
+img.buttonimageGJHSRS{
+	      display: inline !important;
+	      vertical-align: middle !important;
+}
+
+img.flagGJHSRS{
+	      display: inline !important;
+	      vertical-align: middle !important;
+	      padding-bottom:2px !important;
+}
+
+img.buttonselectedGJHSRS{
+	      display: inline !important;
+	      background: #dd8 !important;
+	      border: 1px solid #bb6 !important;
+	      margin: -1px !important;
+	      border-radius: 2px !important;
+}
+
+div.noticebarscontainerGJHSRS{
+	     display: block !important;
+	     text-align: left !important;
+	     margin-bottom: 4px !important;
+	     overflow-y: auto !important;
+}
+
+div.noticebarGJHSRS{
+	     display: block !important;
+	     background: white !important;
+	     font-size: x-small !important;
+	     border-left: 3px solid lightGrey !important;
+	     margin-bottom: 1px !important;
+	     padding-left: 2px !important;
+}
+
+div.noticebarGJHSRS img{
+	      display: inline !important;
+	      margin-right: 1px !important;
+	      vertical-align: text-top !important;
+}
+
+div.noticebarGJHSRS a{
+	      display: inline !important;
+	      font-family: sans-serif !important;
+	       font-style: normal !important;
+	       font-variant: normal !important;
+	       font-weight: normal !important;
+	       font-size: x-small !important;
+}
+
+div.noticebarGJHSRS a:link{
+	      display: inline !important;
+	      color: #0645AD !important;
+	      text-decoration: none !important;
+}
+
+div.noticebarGJHSRS a:visited{
+	      display: inline !important;
+	      color: #0B0080 !important;
+	      text-decoration: none !important;
+}
+
+iframe.iframecontentGJHSRS{
+	     display: inline !important;
+	     width: 100% !important;
+}
+
+</style><style id="simplehl_hlstyle_UDWUZB">.simplehl1_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,0,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl2_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,165,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl3_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,255,96,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl4_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(96,255,96,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl5_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(96,255,255,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl6_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #000000!important; background-color: rgba(255,96,255,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } .simplehl7_WXVAQY { display: inline!important;font-family:inherit!important; font-style:inherit!important; font-variant:inherit!important; font-weight:inherit!important; border-color: transparent !important; color: #ffffff!important; background-color: rgba(0,0,0,0.7)!important; font-size: inherit!important; -webkit-transition-property: color, background-color, -webkit-box-shadow; -webkit-transition-duration: 0.5s, 0.5s, 0.5s; -webkit-transition-timing-function: linear, linear, linear; padding: 0.2em!important; -webkit-box-shadow: rgba(0,0,0,0.42) 3px 3px 4px!important; border-radius: 6px!important; } </style><style id="simplehl_flashstyle_QKMUAV">@-webkit-keyframes flash {         0% {             opacity: 1;         }         100% {             opacity: 0;         }}</style></head>
+
+<body link="#006699" vlink="#006699" alink="#006699" marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" rightmargin="0" background="./Motion Segmentation   vision.ucsd.edu_files/IMG_bgimg.gif" style="background-color:white;background-attachment:fixed;background-repeat:no-repeat;background-position:0 0;" class="popups-processed">
+
+<div class="hide"><a href="http://vision.ucsd.edu/project/motion-segmentation#content" title="Skip navigation." accesskey="2">Skip navigation</a>.</div>
+
+
+<table style="border:2px solid #000000;margin-left:20px" width="720" cellspacing="0" cellpadding="0" bgcolor="#000000">
+  <tbody><tr>
+    <td width="240" height="70" class="vision" id="top">
+      <a href="http://www.jacobsschool.ucsd.edu/"><img width="240" height="70" src="./Motion Segmentation   vision.ucsd.edu_files/jacobs_school.jpg" border="0"></a>
+    </td><td width="240" height="70" class="vision" id="top" bgcolor="#000000">
+      <a href="http://www.cse.ucsd.edu/"><img src="./Motion Segmentation   vision.ucsd.edu_files/grayCSE.jpg" width="240" height="70" border="0"></a>
+    </td>
+    <td width="240" height="70" class="vision" id="top">
+      <img src="./Motion Segmentation   vision.ucsd.edu_files/cse_building.jpg" width="240" height="70" border="0">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center" class="vision" id="top">
+      <h1 id="top" class="vision"><a href="http://vision.ucsd.edu/">UCSD Computer Vision</a></h1>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" width="72-" height="90" class="vision" id="top">
+      <img src="./Motion Segmentation   vision.ucsd.edu_files/ff2top.png" width="720" height="120" border="0">
+    </td>
+  </tr>
+</tbody></table>
+
+
+<p style="margin-top: -10pt">
+</p><table bgcolor="#EEEEEE" width="720" style="text-align:center;margin-left:20px" cellpadding="0" cellspacing="0" border="0" height="0">
+  <tbody>
+    <tr>
+      <td>
+        <ul class="links" id="navlist"><li class="menu-241 first"><a href="http://vision.ucsd.edu/people" title="People">People</a></li>
+<li class="menu-258"><a href="http://vision.ucsd.edu/projects" title="Projects">Projects</a></li>
+<li class="menu-251"><a href="http://vision.ucsd.edu/biblio" title="Publications">Publications</a></li>
+<li class="menu-1594"><a href="http://vision.ucsd.edu/datasetsAll" title="">Datasets</a></li>
+<li class="menu-477 last"><a href="http://vision.ucsd.edu/content/misc" title="Misc">Misc</a></li>
+</ul>      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table cellpadding="15" cellspacing="0" width="720" style="margin-left:20px">
+  <tbody>
+    <!-- Do not display the left sidebar -->
+<!--  <tr>
+        <td id="sidebar-left">
+          </td>
+      </tr>-->
+  <tr>
+    <td valign="top">
+                            
+          
+        
+        
+        
+      <!-- start main content -->
+      <div class="node">
+        <div class="content">
+<p></p><h1 class="vision" style="text-align:center;">Motion Segmentation</h1><p></p>
+
+<!-- Developed by -->
+<p style="text-align:center;" class="vision">
+  <a href="http://vision.ucsd.edu/person/josh-wills" class="vision">Josh Wills</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Sameer Agarwal</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Serge Belongie</a></p>
+<br>
+
+
+<table class="vision" summary="" cellpadding="2">
+  <tbody style="border-top:none">
+    <tr>
+      <td style="padding-right:20px">
+        <!-- Summary -->
+              </td>
+      <td>
+        <img src="./Motion Segmentation   vision.ucsd.edu_files/hand_kybd_small.jpg" style="max-width:250px; max-height:250px">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="vision"> More info on: <a class="vision" href="http://vision.ucsd.edu/motion_seg.html">http://vision.ucsd.edu/motion_seg.html</a><br></p>
+<!-- Other People -->
+
+<!-- Body -->
+
+<!-- Downloads -->
+
+<!-- External Links -->
+<hr class="vision"><br><h2 class="vision">Links</h2><p><a href="http://vision.ucsd.edu/~jwills/lrc.html">A Feature-based Approach for Determining Dense Long Range Correspondences</a></p>
+
+<!-- Related Publications -->
+<hr class="vision"><h2 class="vision">Related Publications</h2><div class="biblio-inline"><div class="biblio-year">2010</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/biblio/author/219" class="vision">Flores A.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"Removing pedestrians from Google Street View images", </span> 
+<i>IEEE International Workshop on Mobile Vision</i>, San Francisco, CA, June, 2010.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.title=Removing+pedestrians+from+Google+Street+View+images&amp;rft.date=2010&amp;rft.aulast=Flores&amp;rft.aufirst=Arturo&amp;rft.au=Flores%2C+Arturo&amp;rft.au=Belongie%2C+Serge&amp;rft.place=San+Francisco%2C+CA"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/366/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]<span class="biblio_file_links">[<a href="http://vision.ucsd.edu/sites/default/files/IWMV_13.pdf" class="vision">pdf</a>]</span></div>
+<div class="biblio-year">2006</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/josh-wills" class="vision">Wills J.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"A Feature-based Approach for Dense Segmentation and Estimation of Large Disparity Motion", </span> 
+<i>International Journal of Computer Vision (IJCV)</i>, vol. 68, no. 2, pp. 125-143, June, 2006.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu%2Fdrupal&amp;rft.genre=article&amp;rft.atitle=A+Feature-based+Approach+for+Dense+Segmentation+and+Estimation+of+Large+Disparity+Motion&amp;rft.title=International+Journal+of+Computer+Vision+%28IJCV%29&amp;rft.date=2006&amp;rft.volume=68&amp;rft.spage=125&amp;rft.epage=143&amp;rft.aulast=Wills&amp;rft.aufirst=Josh&amp;rft.au=Belongie%2C+Serge"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/124/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]<span class="biblio_file_links">[<a href="http://vision.ucsd.edu/sites/default/files/WillsAB_ijcv06.pdf" class="vision">pdf</a>]</span></div>
+<div class="biblio-year">2003</div>
+<div class="biblio-entry">
+<span class="biblio-authors"><a href="http://vision.ucsd.edu/person/josh-wills" class="vision">Wills J.</a>, <a href="http://vision.ucsd.edu/person/sameer-agarwal" class="vision">Agarwal S.</a>, <a href="http://vision.ucsd.edu/person/serge-belongie" class="vision">Belongie S.</a>, </span> 
+<span class="biblio-title">"What Went Where", </span> 
+<i>IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, vol. 1, Madison, WI, pp. 37-44, 2003.
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rfr_id=info%3Asid%2Fvision.ucsd.edu&amp;rft.title=What+Went+Where&amp;rft.date=2003&amp;rft.volume=1&amp;rft.spage=37&amp;rft.epage=44&amp;rft.aulast=Wills&amp;rft.aufirst=Josh&amp;rft.au=Wills%2C+Josh&amp;rft.au=Agarwal%2C+Sameer&amp;rft.au=Belongie%2C+Serge&amp;rft.place=Madison%2C+WI"></span>[<a href="http://vision.ucsd.edu/biblio/export/bibtex/76/popup" class="popups popups-processed" title="Click to get the BibTEX output [Popup]">BibTex</a>]<span class="biblio_file_links">[<a href="http://vision.ucsd.edu/sites/default/files/01211335.pdf" class="vision">pdf</a>]</span></div>
+</div></div>
+    </div>
+            <!-- end main content -->
+
+      <!-- Display the login link, but only on the first page and if nobody is logged in -->
+          </td>
+    <!-- Display the right sidebar only when a user is logged in -->
+      </tr>
+</tbody>
+</table>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="19" version="2.0">
+<workbenchAdvisor/>
+<window height="800" maximized="true" width="932" x="301" y="0">
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.omnetpp.scave.VectorBrowserView"/>
+</fastViewData>
+<intro standby="true"/>
+<perspectiveBar>
+<itemSize x="233"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.omnetpp.neddoc.toolbars.neddocToolbar" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.omnetpp.scave.editors.ScaveEditor" itemType="typePlaceholder" x="368" y="22"/>
+<coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.omnetpp.sequencechart.editors.SequenceChartEditor" itemType="typePlaceholder" x="437" y="22"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.omnetpp.msg.editor.MsgEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.omnetpp.inifile.editor.editors.InifileEditor" itemType="typePlaceholder" x="84" y="22"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.omnetpp.ned.editor" itemType="typePlaceholder" x="115" y="22"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1321462334376" focus="true" label="Workspace - Simulation">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</editorArea>
+</editors>
+<views>
+<view id="org.omnetpp.inifile.ModuleHierarchy" partName="Module Hierarchy">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.omnetpp.eventlogtable.editors.EventLogTableView" partName="Event Log">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.omnetpp.scave.VectorBrowserView" partName="Output Vector">
+<viewState/>
+</view>
+<view id="org.omnetpp.scave.DatasetView" partName="Dataset">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.DisassemblyView" partName="Disassembly">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>&#x0A;<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.internal.introview" partName="Welcome">
+<viewState>
+<presentation currentPage="tutorials" restore="true"/>
+<standbyPart/>
+</viewState>
+</view>
+<view id="org.omnetpp.inifile.ModuleParameters" partName="NED Parameters">
+<viewState/>
+</view>
+<view id="org.eclipse.help.ui.HelpView" partName="Help">
+<viewState BrowserPart.url="/org.omnetpp.doc/content/userguide/ch09s03.html" pageId="browser-page"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.omnetpp.main.OmnetppPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.omnetpp.ide.PerspectiveFactory" id="org.omnetpp.main.OmnetppPerspective" label="Simulation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.omnetpp.ned.ActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.omnetpp.inifile.ModuleParameters"/>
+<show_view_action id="org.omnetpp.inifile.ModuleHierarchy"/>
+<show_view_action id="org.omnetpp.inifile.NedInheritance"/>
+<show_view_action id="org.omnetpp.scave.DatasetView"/>
+<show_view_action id="org.omnetpp.scave.VectorBrowserView"/>
+<show_view_action id="org.omnetpp.sequencechart.editors.SequenceChartView"/>
+<show_view_action id="org.omnetpp.eventlogtable.editors.EventLogTableView"/>
+<show_in_time id="org.eclipse.ui.views.ContentOutline" time="1326375104054"/>
+<new_wizard_action id="org.omnetpp.main.wizards.NewOmnetppProject"/>
+<new_wizard_action id="org.omnetpp.cdt.wizards.NewOmnetppCCProject"/>
+<new_wizard_action id="org.omnetpp.ned.editor.wizards.NewSimulation"/>
+<new_wizard_action id="org.omnetpp.ned.editor.wizards.NewSimpleModule"/>
+<new_wizard_action id="org.omnetpp.ned.editor.wizards.NewCompoundModule"/>
+<new_wizard_action id="org.omnetpp.ned.editor.wizards.NewNetwork"/>
+<new_wizard_action id="org.omnetpp.ned.editor.wizards.NewNedFile"/>
+<new_wizard_action id="org.omnetpp.msg.editor.wizards.NewMsgFile"/>
+<new_wizard_action id="org.omnetpp.inifile.editor.wizards.NewIniFile"/>
+<new_wizard_action id="org.omnetpp.scave.wizards.NewScaveFile"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.omnetpp.common.wizards.NewWizard"/>
+<new_wizard_action id="org.omnetpp.cdt.wizards.NewOmnetppClass"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.omnetpp.main.OmnetppPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.omnetpp.inifile.ModuleHierarchy"/>
+<view id="org.omnetpp.inifile.ModuleParameters"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.omnetpp.scave.VectorBrowserView"/>
+<view id="org.omnetpp.scave.DatasetView"/>
+<view id="org.omnetpp.eventlogtable.editors.EventLogTableView"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.internal.introview"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@999033" orientation="256" selectedTabId="org.eclipse.help.ui.HelpView" style="0">
+<fastViews>
+<view id="org.eclipse.help.ui.HelpView" ratio="0.6978417"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@525531" ratio="0.74813586" ratioLeft="903" ratioRight="304" relationship="2" relative="left">
+<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="Welcome"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.26519337" ratioLeft="240" ratioRight="665" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.7384393" ratioLeft="511" ratioRight="181" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.omnetpp.main.NewVersionView" appearance="2" expanded="2">
+<page content="org.omnetpp.inifile.ModuleHierarchy" label="Module Hierarchy"/>
+<page content="org.omnetpp.inifile.ModuleParameters" label="NED Parameters"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.omnetpp.scave.VectorBrowserView" label="Output Vector"/>
+<page content="org.omnetpp.scave.DatasetView" label="Dataset"/>
+<page content="org.omnetpp.eventlogtable.editors.EventLogTableView" label="Event Log"/>
+<page content="org.omnetpp.main.NewVersionView" label="New OMNeT++ Version"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.omnetpp.inifile.NedInheritance" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@999033" ratio="0.46779662" ratioLeft="552" ratioRight="628" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.omnetpp.ned.ActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.SignalsView"/>
+<show_view_action id="org.eclipse.debug.ui.RegisterView"/>
+<show_view_action id="org.eclipse.debug.ui.ModuleView"/>
+<show_view_action id="org.eclipse.debug.ui.MemoryView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.DisassemblyView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.executablesView"/>
+<show_view_action id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.omnetpp.main.OmnetppPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.debug.ui.DisassemblyView"/>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@8ed4f4" orientation="512" selectedTabId="org.eclipse.ui.internal.introview" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.internal.introview" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@8ed4f4" ratio="0.74958676" ratioLeft="907" ratioRight="303" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.omnetpp.main.NewVersionView" label="LabelNotFound"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.75" ratioLeft="543" ratioRight="181" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44935542" ratioLeft="244" ratioRight="299" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74958676" ratioLeft="907" ratioRight="303" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.debug.ui.DisassemblyView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.cdt.debug.ui.DisassemblyView" label="Disassembly"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="605" ratioRight="605" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory/>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@999033"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@525531"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="internetMsg_m.h" tooltip="newdspv1/internetMsg_m.h">
+<persistable path="/newdspv1/internetMsg_m.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="consistency.cc" tooltip="newdspv1/consistency.cc">
+<persistable path="/newdspv1/consistency.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.scave.editors.ScaveEditor" name="General.anf" tooltip="dsp2/results/General.anf">
+<persistable path="/dsp2/results/General.anf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.scave.editors.ResultFileOpener.vec" name="General-0.vec" tooltip="dsp2/results/General-0.vec">
+<persistable path="/dsp2/results/General-0.vec"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.scave.editors.ResultFileOpener.vci" name="General-0.vci" tooltip="dsp2/results/General-0.vci">
+<persistable path="/dsp2/results/General-0.vci"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="General.svg" tooltip="dsp2/results/General.svg">
+<persistable path="/dsp2/results/General.svg"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="netFault.cc" tooltip="dsp2/netFault.cc">
+<persistable path="/dsp2/netFault.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.ned.editor.launcher" name="simulationNet.ned" tooltip="dsp2/simulationNet.ned">
+<persistable path="/dsp2/simulationNet.ned"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="internet.conf" tooltip="dsp2/internet.conf">
+<persistable path="/dsp2/internet.conf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.ned.editor.launcher" name="client.ned" tooltip="dsp2/client.ned">
+<persistable path="/dsp2/client.ned"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.ned.editor.launcher" name="broker.ned" tooltip="dsp2/broker.ned">
+<persistable path="/dsp2/broker.ned"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.ned.editor.launcher" name="internet.ned" tooltip="dsp2/internet.ned">
+<persistable path="/dsp2/internet.ned"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="internet.h" tooltip="dsp2/internet.h">
+<persistable path="/dsp2/internet.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="internet.cc" tooltip="dsp2/internet.cc">
+<persistable path="/dsp2/internet.cc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.omnetpp.scave.editors.ResultFileOpener.sca" name="General-0.sca" tooltip="dsp2/results/General-0.sca">
+<persistable path="/dsp2/results/General-0.sca"/>
+</file>
+</mruList>
+</workbench>

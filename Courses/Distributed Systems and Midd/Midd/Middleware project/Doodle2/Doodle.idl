@@ -1,0 +1,68 @@
+module DoodlePackage {  	
+	
+	// TODAS LAS INTERFACS SE IMPLEMENTAN
+	//La implementación de las interfaces son los SERVANTS
+	// en el servidor y los clientes se instancian la implementación
+	// d elas interfaces
+
+	typedef string Message;	
+	
+	//exception ManageDoodleException {
+	//	string info; 
+	//};
+		/*
+		exception DoodleNotFound { };	
+		exception DoodleAlreadyExist { };	
+		exception DoodleAlreadyClose { };		
+		exception DoodleNotCreator { };	
+		*/
+	
+	//----------------------------------------------
+	interface DoodleParticipant { 
+		void printMsg(in Message msg);
+		void startRunning();
+	};	
+	//----------------------------------------------
+
+	typedef sequence<DoodleParticipant> Participants;
+
+	//----------------------------------------------
+	struct DoodleDetails {
+		DoodleParticipant creatorDoodle;
+		string nameDoodle;		
+		string scheduleDoodle;					
+	};
+	//----------------------------------------------
+	interface Doodle {		
+		boolean containsParticipant(in DoodleParticipant client);
+		void addParticipant(in DoodleParticipant participant);
+		void addDayHour(in string dayhour);		
+		readonly attribute DoodleDetails details;						
+		Participants getParticipants(); 
+	};
+	//----------------------------------------------
+	
+	interface ManageDoodle {			
+	
+		Doodle createDoodle(in string nameDoodle, in DoodleParticipant creatorDoodle);		
+		void voteDoodle(in Doodle doodle, in string dayhour, in DoodleParticipant participant);		
+		Doodle getDoodle(in string nameDoodle);		
+		Doodle closeDoodle(in Doodle doodle, in string finalDayHour, in DoodleParticipant creatorDoodle);	
+		/*
+		Doodle createDoodle(in string nameDoodle, in DoodleParticipant creatorDoodle) raises(ManageDoodleException);		
+		void voteDoodle(in Doodle doodle, in string dayhour, in DoodleParticipant participant) raises(ManageDoodleException);		
+		Doodle getDoodle(in string nameDoodle) raises(ManageDoodleException);		
+		Doodle closeDoodle(in Doodle doodle, in string finalDayHour, in DoodleParticipant creatorDoodle) raises(ManageDoodleException);	
+		*/
+	};
+
+
+	
+	//----------------------------------------------	
+	interface DoodleInformer { 
+		void informParticipants(in Doodle doodle, in string finalDayHour);		
+		void addClient(in DoodleParticipant client);				
+		void fwdMsg(in Message msg);
+	};
+	//----------------------------------------------
+};

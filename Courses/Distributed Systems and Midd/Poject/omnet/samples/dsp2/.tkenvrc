@@ -1,0 +1,14 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "SimulationNet.brokers[2].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.brokers[3].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[0].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[1].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[2].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[3].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[4].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.brokers[0].app." "AppPacket" "1" "460x314+2+76:normal"
+inspector "SimulationNet.clients[5].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[6].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.brokers[1].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+inspector "SimulationNet.clients[7].fault." "ConsistencyCtrlPacket" "1" "1124x536+738+313:normal"
+

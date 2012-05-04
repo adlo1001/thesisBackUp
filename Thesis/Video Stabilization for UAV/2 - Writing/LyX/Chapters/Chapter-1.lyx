@@ -1,0 +1,198 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass book
+\options intoc,titlepage,fleqn
+\use_default_options false
+\master ../Thesis.lyx
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding latin9
+\fontencoding T1
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 2
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Section
+Overview
+\end_layout
+
+\begin_layout Standard
+L'introduzione deve essere atomica, quindi non deve contenere n
+\backslash
+`e sottosezioni n
+\backslash
+`e paragrafi n
+\backslash
+`e altro.
+ Il titolo, il sommario e l'introduzione devono sembrare delle scatole cinesi,
+ nel senso che lette in quest'ordine devono progressivamente svelare informazion
+i sul contenuto per incatenare l'attenzione del lettore e indurlo a leggere
+ l'opera fino in fondo.
+ L'introduzione deve essere tripartita, non graficamente ma logicamente:
+\end_layout
+
+\begin_layout Section
+Inquadramento generale
+\end_layout
+
+\begin_layout Standard
+La prima parte contiene una frase che spiega l'area generale dove si svolge
+ il lavoro; una che spiega la sottoarea pi
+\backslash
+`u specifica dove si svolge il lavoro e la terza, che dovrebbe cominciare
+ con le seguenti parole ``lo scopo della tesi 
+\backslash
+`e 
+\backslash
+dots'', illustra l'obbiettivo del lavoro.
+ Poi vi devono essere una o due frasi che contengano una breve spiegazione
+ di cosa e come 
+\backslash
+`e stato fatto, delle attivit
+\backslash
+`a sperimentali, dei risultati ottenuti con una valutazione e degli sviluppi
+ futuri.
+ La prima parte deve essere circa una facciata e mezza o due
+\end_layout
+
+\begin_layout Section
+Scope of the Thesis or Brief Description of the Work
+\end_layout
+
+\begin_layout Standard
+La seconda parte deve essere una esplosione della prima e deve quindi mostrare
+ in maniera pi
+\backslash
+`u esplicita l'area dove si svolge il lavoro, le fonti bibliografiche pi
+\backslash
+`u importanti su cui si fonda il lavoro in maniera sintetica (una pagina)
+ evidenziando i lavori in letteratura che presentano attinenza con il lavoro
+ affrontato in modo da mostrare da dove e perch
+\backslash
+'e 
+\backslash
+`e sorta la tematica di studio.
+ Poi si mostrano esplicitamente le realizzazioni, le direttive future di
+ ricerca, quali sono i problemi aperti e quali quelli affrontati e si ripete
+ lo scopo della tesi.
+ Questa parte deve essere piena (ma non grondante come la sezione due) di
+ citazioni bibliografiche e deve essere lunga circa 4 facciate.
+\end_layout
+
+\begin_layout Section
+Structure of the thesis
+\end_layout
+
+\begin_layout Standard
+La terza parte contiene la descrizione della struttura della tesi ed 
+\backslash
+`e organizzata nel modo seguente.
+ ``La tesi 
+\backslash
+`e strutturata nel modo seguente.
+\end_layout
+
+\begin_layout Standard
+Nella sezione due si mostra 
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+Nella sez.
+ tre si illustra 
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+Nella sez.
+ quattro si descrive 
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+Nelle conclusioni si riassumono gli scopi, le valutazioni di questi e le
+ prospettive future 
+\backslash
+dots
+\end_layout
+
+\begin_layout Standard
+Nell'appendice A si riporta 
+\backslash
+dots (Dopo ogni sezione o appendice ci vuole un punto).''
+\end_layout
+
+\begin_layout Standard
+I titoli delle sezioni da 2 a M-1 sono indicativi, ma bisogna cercare di
+ mantenere un significato equipollente nel caso si vogliano cambiare.
+ Queste sezioni possono contenere eventuali sottosezioni.
+\end_layout
+
+\end_body
+\end_document
